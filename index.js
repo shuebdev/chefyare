@@ -61,3 +61,21 @@ btn.addEventListener("click", async () => {
     console.log("Copy failed:", err);
   }
 });
+
+
+const form = document.getElementById("form");
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById('name');
+  const number = document.getElementById('phone');
+  const location = document.getElementById('location');
+  const quantity = document.getElementById('quantity');
+
+  const whatsApp = `New order:
+  Name: ${name}
+  Phone Number: ${number}
+  location: 
+  `
+})

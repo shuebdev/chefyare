@@ -642,7 +642,7 @@ input[type="radio"]
   font-family: 'poppins';
 }
 /* mpesa */
-button {
+.copyBtn {
   padding: 0.6rem 0.8rem;
   border: none;
   background: var(--black-2);
@@ -653,7 +653,7 @@ button {
   width: 30%;
 }
 
-button:hover {
+.copyBtn:hover {
   background: var(--blue-2);
 }
 .billing-details{
@@ -677,6 +677,18 @@ button:hover {
   font-weight: 500;
   color: #d10000;
 }
+.submit{
+  padding: 0.8rem 0.8rem;
+  background: #e53935;
+  color: white;
 
+  border-radius: 0.8rem;
+  border: 1px solid #e53935;
+  font-size: 1.2rem;
+}
+.submit:hover
+{
+  background-color: var();
+}
 /* end of mpesa */
 /* end of form */
