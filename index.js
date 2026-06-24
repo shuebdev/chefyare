@@ -52,30 +52,74 @@ btn.addEventListener("click", async () => {
   try {
     await navigator.clipboard.writeText(phone);
     btn.textContent = "Copied!";
-    
+
     setTimeout(() => {
       btn.textContent = "Copy Number";
     }, 2000);
-
   } catch (err) {
     console.log("Copy failed:", err);
   }
 });
 
-
 const form = document.getElementById("form");
 
-form.addEventListener('submit', (e) => {
+form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const name = document.getElementById('name');
-  const number = document.getElementById('phone');
-  const location = document.getElementById('location');
-  const quantity = document.getElementById('quantity');
+  const name = document.getElementById("name");
+  const number = document.getElementById("phone");
+  const location = document.getElementById("location");
+  const quantity = document.getElementById("quantity");
 
   const whatsApp = `New order:
   Name: ${name}
   Phone Number: ${number}
   location: 
-  `
-})
+  `;
+});
+
+const cards = [
+{
+  id: 1,
+  image: "./images/meatrice.png",
+  name: "Rice and chicken",
+  desc: "Freshly prepared rice and chicken served with a complimentary juice and fresh chili at no extra cost.",
+  price: 250,
+},
+{
+  id: 1,
+  image: "./images/choclatecake.jpg",
+  name: "Rice and chicken",
+  desc: "Freshly prepared rice and chicken served with a complimentary juice and fresh chili at no extra cost.",
+  price: 250,
+},
+];
+
+const renderedItems = (item) => {
+  const container = document.getElementById("foodContainer");
+
+  container.innerHTML = "";
+
+  item.forEach((food) => {
+    container.innerHTML += `
+           <div class="myWork-item" data-aos="fade-up">
+              <div class="myWork-img">
+                <img src="${food.image}" alt="${food.name}" />
+              </div>
+              <div class="myWork-info">
+                <h2 class="myWork-item-title">${food.name}</h2>
+                <p class="myWork-item-desc">
+                  ${food.desc}
+                </p>
+                <h1 class="myWork-item-price">${food.price}</h1>
+               <a href="order.html?item=${encodeURIComponent(food.name)}&price=${food.price}"
+             class="primary-btn btn">
+            order now
+          </a>
+              </div>
+            </div>
+    `;
+  });
+};
+
+renderedItems(cards);
