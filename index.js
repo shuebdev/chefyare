@@ -60,7 +60,7 @@ btn.addEventListener("click", async () => {
     console.log("Copy failed:", err);
   }
 });
-
+console.log("hey form")
 const form = document.getElementById("form");
 
 form.addEventListener("submit", (e) => {
@@ -77,7 +77,7 @@ form.addEventListener("submit", (e) => {
   location: 
   `;
 });
-
+console.log("starting");
 const cards = [
 {
   id: 1,
@@ -94,7 +94,7 @@ const cards = [
   price: 250,
 },
 ];
-
+console.log("now on render")
 const renderedItems = (item) => {
   const container = document.getElementById("foodContainer");
 
@@ -123,3 +123,5 @@ const renderedItems = (item) => {
 };
 
 renderedItems(cards);
+console.log("ends here")
+console.log("container:", document.getElementById("foodContainer"));
