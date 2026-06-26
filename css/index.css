@@ -1,7 +1,7 @@
 :root {
-  --blue-1: #f3fbf6;   /* body background */
+  --blue-1: #f3fbf6; /* body background */
   --light-blue: #d7f2e3; /* cards/nav/footer */
-  --blue-2: #22c55e;   /* buttons (green = food/action) */
+  --blue-2: #22c55e; /* buttons (green = food/action) */
 
   --white-1: #ffffff;
   --black-1: #0f172a;
@@ -32,7 +32,7 @@ img {
   object-fit: cover;
 }
 section {
-  padding: 50px 0;
+  padding: 10px 0;
 }
 @media only screen and (max-width: 768px) {
   section {
@@ -73,6 +73,9 @@ p {
   height: 80px;
   top: 0;
 }
+#hero {
+  margin-bottom: 3rem;
+}
 .nav-wrapper {
   display: flex;
   justify-content: space-between;
@@ -80,10 +83,22 @@ p {
 }
 .list .links {
   font-family: "poppins";
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: var(--black-2);
   font-weight: 400;
   transition: 0.1s ease-in-out;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+
+.links svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
 }
 .list li:hover .links {
   color: var(--blue-2);
@@ -109,6 +124,10 @@ p {
 .btn {
   background-color: var(--blue-2);
   transition: 0.1s ease-in;
+  
+  display: flex;
+  align-items: center;
+  justify-self: center;
 }
 .btn:hover {
   background-color: #34d399;
@@ -228,7 +247,7 @@ footer li a:hover {
 
 @keyframes key {
   0% {
-    box-shadow: 0 0 0 0 rgba(34, 197, 94, 1)  ;
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 1);
   }
   70% {
     box-shadow: 0 0 0 18px rgba(37, 211, 102, 0);
@@ -241,7 +260,7 @@ footer li a:hover {
 #hero {
   background:
     linear-gradient(rgba(0, 0, 0, 0.455), rgba(0, 0, 0, 0.755)),
-    url("../images/hero.jpeg") no-repeat center / cover;
+    url("../image/hero.webp") no-repeat center / cover;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -271,6 +290,7 @@ footer li a:hover {
   color: var(--white-1);
   line-height: 1.8rem;
   font-family: "Raleway";
+  max-width: 450px;
 }
 .hero-info a {
   display: inline-block;
@@ -294,25 +314,47 @@ footer li a:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 2rem;
 }
 .myWork-desc {
   text-align: center;
   max-width: 700px;
 }
+#service{
+  padding: 30px 0;
+}
 .service-wrapper {
   display: flex;
+  flex-direction: row-reverse;
+  gap: 3rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.service-right-side {
+  flex: 4;
+  display: flex;
   flex-direction: column;
-  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+.service-left-side {
+  flex: 3;
+}
+.service-left-side img {
+  border-radius: 1rem;
 }
 .service-title {
   font-family: "poppins";
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
   font-weight: 600;
+  margin-bottom: 2rem;
 }
 .service-desc {
   font-size: 1.8rem;
   margin-bottom: 1rem;
+  max-width: 500px;
+  text-align: left;
 }
 
 .whatsApp-float {
@@ -423,11 +465,9 @@ footer li a:hover {
   display: flex;
   justify-content: center;
   align-items: stretch;
-  width: 100%;
+  margin-bottom: 1rem;
   min-height: 400px;
   flex-direction: column;
-  
-
 }
 .myWorker-title {
   text-align: center;
@@ -464,7 +504,7 @@ footer li a:hover {
 .myWork-desc {
   margin-bottom: 1rem;
 }
-.myWork-item-price{
+.myWork-item-price {
   font-size: 1.4rem;
 }
 /* end my work styles */
@@ -526,9 +566,10 @@ footer li a:hover {
   .contact-wrapper {
     gap: 2rem;
   }
-    .contact-desc {
-      font-size: 1.4rem;
-    }
+  .contact-desc {
+    font-size: 1.4rem;
+  }
+
 }
 /* end tablets */
 /* phones */
@@ -540,7 +581,7 @@ footer li a:hover {
   .service-item-desc {
     font-size: 1.4rem;
   }
-   #hero {
+  #hero {
     height: 100vh;
     padding: 1.5rem;
     background-position: center;
@@ -554,7 +595,7 @@ footer li a:hover {
     font-size: 1.1rem;
   }
 
-   p,
+  p,
   a {
     font-size: 1.4rem;
   }
@@ -574,59 +615,58 @@ footer li a:hover {
   padding: 1rem;
   border-radius: 1.2rem;
   max-width: 500px;
-  width: 100%; 
+  width: 100%;
   box-shadow: 0 4px 12px rgba(34, 197, 94, 0.25);
   margin: 0 auto;
 }
-.form-group{
+.form-group {
   display: flex;
   flex-direction: column;
 }
-.form-group label{
+.form-group label {
   font-size: 1.4rem;
-  font-family: 'raleway';
+  font-family: "raleway";
   margin-bottom: 0.5rem;
   font-weight: 500;
 }
-.form-group input{
+.form-group input {
   padding: 0.8rem 0.5rem;
   border: 1px solid var(--blue-1);
   border-radius: 0.6rem;
   background-color: var(--white-1);
 }
-.form-group input:focus{
-   border-color: var(--light-blue);
-   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+.form-group input:focus {
+  border-color: var(--light-blue);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
-.form-group input::placeholder{
+.form-group input::placeholder {
   font-size: 1.2rem;
   text-transform: capitalize;
-  font-family: 'raleway';
+  font-family: "raleway";
   color: var(--black-2);
 }
 
-.userInfo{
+.userInfo {
   gap: 1rem;
   display: flex;
   flex-direction: column;
 }
-#form{
+#form {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.form-title{
+.form-title {
   font-size: 2rem;
   text-align: center;
   margin-bottom: 1rem;
 }
-.payment{
+.payment {
   display: flex;
   flex-direction: column;
 }
-input[type="radio"]
-{
+input[type="radio"] {
   vertical-align: middle;
 }
 .radio-group label {
@@ -642,10 +682,10 @@ input[type="radio"]
   width: 14px;
   height: 14px;
 }
-.payment h4{
+.payment h4 {
   font-size: 1.4rem;
   margin-bottom: 1rem;
-  font-family: 'poppins';
+  font-family: "poppins";
 }
 /* mpesa */
 .copyBtn {
@@ -658,13 +698,13 @@ input[type="radio"]
   display: block;
   width: 30%;
 }
-.copyBtn:active{
+.copyBtn:active {
   background: #16a34a;
 }
 .copyBtn:hover {
   background: #34d399;
 }
-.billing-details{
+.billing-details {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -674,18 +714,17 @@ input[type="radio"]
   padding: 1rem;
   border-radius: 0.8rem;
 }
-.billing-title{
+.billing-title {
   font-size: 1.4rem;
   color: var(--black-2);
-
 }
-.radio-detail{
+.radio-detail {
   font-size: 1.2rem;
-  font-family: 'raleway';
+  font-family: "raleway";
   font-weight: 500;
   color: #d10000;
 }
-.submit{
+.submit {
   padding: 0.8rem 0.8rem;
   background: var(--blue-2);
   color: white;
@@ -694,9 +733,53 @@ input[type="radio"]
   border: 1px solid var(--blue-2);
   font-size: 1.2rem;
 }
-.submit:hover
-{
+.submit:hover {
   background-color: var();
 }
 /* end of mpesa */
 /* end of form */
+.service-sub-title{
+  font-weight: 500;
+  font-family: "poppins";
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+@media only screen and (max-width: 768px)
+{
+  .service-wrapper{
+    flex-direction: column-reverse;
+  }
+  .service-sub-title{
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+  }
+  .service-title{
+    font-size: 1.8rem;
+  }
+  #service{
+    padding: 0;
+  }
+  .myWorker-title{
+    font-size: 1.8rem;
+  }
+}
+
+.buttons{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.filter-btn{
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.8rem;
+  border: 1px solid var(--blue-2);
+  background-color: var(--white-1);
+  text-transform: capitalize;
+}
+.filter-btn:hover{
+  background-color: var(--blue-2);
+  color: var(--white-1);
+}
