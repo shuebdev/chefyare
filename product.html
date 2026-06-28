@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/product.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Home</title>
+  </head>
+  <body>
+    <section class="nav">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="./index.html" class="logo">
+            <img src="./images/logo.svg" alt="logo" />
+          </a>
+          <nav>
+            <div class="nav-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="21" y1="10" x2="3" y2="10" />
+                <line x1="21" y1="6" x2="3" y2="6" />
+                <line x1="21" y1="14" x2="3" y2="14" />
+                <line x1="21" y1="18" x2="3" y2="18" />
+              </svg>
+              <div class="bgOverlay"></div>
+            </div>
+            <ul class="list">
+              <div class="close-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+              </div>
+              <div class="list-wrapper">
+                <li>
+                  <a href="./index.html" class="links">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                      />
+                      <polyline points="9 22 9 12 15 12 15 22" />
+                    </svg>
+                    <span>home</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#lunch" class="links">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                      <circle cx="12" cy="7" r="4" />
+                    </svg>
+                    <span>about me</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#contacts" class="links">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="8" y1="6" x2="21" y2="6" />
+                      <line x1="8" y1="12" x2="21" y2="12" />
+                      <line x1="8" y1="18" x2="21" y2="18" />
+                      <line x1="3" y1="6" x2="3.01" y2="6" />
+                      <line x1="3" y1="12" x2="3.01" y2="12" />
+                      <line x1="3" y1="18" x2="3.01" y2="18" />
+                    </svg>
+                    <span>menu</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#lunch" class="links contact">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                      />
+                    </svg>
+
+                    <span>contact</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="primary-btn btn openModal navbtn">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="9" cy="21" r="1" />
+                      <circle cx="20" cy="21" r="1" />
+                      <path
+                        d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+                      />
+                    </svg>
+                    <span>cart</span>
+                  </a>
+                </li>
+              </div>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </section>
+    <section id="product">
+      <div class="container">
+        <div class="product-wrapper">
+          <div class="product-img">
+            <img src="./images/blueberrymuffin.webp" alt="blueberrymuffin" />
+          </div>
+          <div class="product-info">
+            <h1 class="product-name">blue berry muffin</h1>
+            <p class="product-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+              consectetur est voluptatibus incidunt nulla? Porro numquam
+              deleniti pariatur sed eligendi?
+            </p>
+            <h3 class="product-price">ksh 350</h3>
+            <div class="quantity">
+              <button class="minunBtn">
+                <!-- https://feathericons.dev/?search=minus&iconset=feather -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  class="main-grid-item-icon"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <line x1="5" x2="19" y1="12" y2="12" />
+                </svg>
+              </button>
+              <span id="total">1</span>
+              <button class="addBtn">
+                <!-- https://feathericons.dev/?search=plus&iconset=feather -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  class="main-grid-item-icon"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <line x1="12" x2="12" y1="5" y2="19" />
+                  <line x1="5" x2="19" y1="12" y2="12" />
+                </svg>
+              </button>
+            </div>
+            <div class="sizes-btn" id="sizesBtn">
+              <button class="sizes">300g</button>
+              <button class="sizes">400g</button>
+              <button class="sizes">1kg</button>
+            </div>
+
+            <div class="desc-item">
+              <h1 class="desc">description</h1>
+              <p class="desc-item-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+                et autem velit ipsam neque repellat optio ipsum quo! Ullam
+                delectus harum et sint aliquid necessitatibus mollitia, ad animi
+                officia. Omnis cumque eius voluptate assumenda laboriosam
+                delectus similique sequi ut possimus!
+              </p>
+            </div>
+            <div class="ingridients">
+              <h1 class="ingr-title">ingredients</h1>
+              <ul class="ingriContainer">
+                <li class="ingr-list">pasta</li>
+                <li class="ingr-list">rice</li>
+                <li class="ingr-list">amaki</li>
+                <li class="ingr-list">wafsd</li>
+                <li class="ingr-list">bisquet</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-buttons" id="productButtons">
+          <button id="deleteBtn" class="deletebtn">
+            <!-- https://feathericons.dev/?search=trash&iconset=feather -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              class="main-grid-item-icon"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <polyline points="3 6 5 6 21 6" />
+              <path
+                d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+              />
+            </svg>
+            <span class="button-desc">remove</span>
+          </button>
+          <button class="add-to-cart" id="addToCart">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="9" cy="21" r="1" />
+              <circle cx="20" cy="21" r="1" />
+              <path
+                d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+              />
+            </svg>
+            <span class="button-desc">add to cart</span>
+          </button>
+          <button class="call-button" id="openWhatsApp">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <section>
+        <div class="container">
+          <div class="footer-wrapper">
+            <div class="footer-col1">
+              <h3 class="footer-title">menu</h3>
+              <ul>
+                <li><a href="#courses">about me</a></li>
+                <li><a href="#contacts">contact</a></li>
+                <li><a href="./index.html">home</a></li>
+              </ul>
+            </div>
+            <div class="footer-col1">
+              <h3 class="footer-title">contact</h3>
+              <ul>
+                <li>
+                  <a href="./about.html" class="social-title"
+                    >whatsApp number:
+                    <span class="social-span">+254 702388122</span></a
+                  >
+                </li>
+                <li>
+                  <a href="./about.html" class="social-title"
+                    >gmail:
+                    <span class="social-span">ssuhebbare@gmail.com</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="footer-col1">
+              <h3 class="footer-title">address</h3>
+              <ul>
+                <li>
+                  <a
+                    href="https://www.google.com/maps?q=Eastleigh+Section+3+Nairobi"
+                    target="_blank"
+                    >eastleigh, section 3</a
+                  >
+                </li>
+                <li><a href="./mywork.html">free delivery</a></li>
+              </ul>
+            </div>
+            <div class="footer-col1">
+              <h3 class="footer-title">socials</h3>
+              <ul>
+                <li><a href="./">instagram</a></li>
+                <li><a href="https://www.tiktok.com/@_.chef_ali">tiktok</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <div class="copy-right">
+      <p class="copyright-desc"></p>
+    </div>
+    <!-- end of footer -->
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./js/render.js"></script>
+    <script src="./js/filter.js"></script>
+    <script src="./js/product.js"></script>
+  </body>
+</html>

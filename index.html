@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/global.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -19,7 +21,7 @@
       <div class="container">
         <div class="nav-wrapper">
           <a href="./index.html" class="logo">
-            <img src="./image/logo.svg" alt="logo" />
+            <img src="./images/logo.svg" alt="logo" />
           </a>
           <nav>
             <div class="nav-icon">
@@ -89,7 +91,7 @@
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
-                      stroke-width="2"
+                      stroke-width="1.6"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     >
@@ -108,7 +110,7 @@
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
-                      stroke-width="2"
+                      stroke-width="1.6"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     >
@@ -123,7 +125,28 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="primary-btn btn openModal">
+                  <a href="#lunch" class="links contact">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                      />
+                    </svg>
+
+                    <span>contact</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="primary-btn btn openModal navbtn">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -160,7 +183,7 @@
                 “From Our Kitchen to Your Plate”
               </h1>
               <h4 class="hero-sub-title" data-aos="fade-left">-chef yare</h4>
-              <p class="hero-desc" data-aos="fade-up">
+              <p class="hero-desc" data-aos="fade-left">
                 “We prepare fresh homemade meals daily, including food,
                 desserts, and cakes, all made with care and authentic flavor.
                 Delivery is available, with payment on delivery.”
@@ -168,7 +191,7 @@
               <a
                 href="#"
                 class="primary-btn btn key openModal"
-                data-aos="fade-up"
+                data-aos="fade-left"
                 >contact me</a
               >
             </div>
@@ -181,7 +204,7 @@
     <section id="service">
       <div class="container">
         <h1 class="service-title" data-aos="fade-right">services</h1>
-        <div class="service-wrapper" data-aos="fade-up">
+        <div class="service-wrapper" data-aos="fade-left">
           <div class="service-right-side">
             <h1 class="service-sub-title">what we do:</h1>
             <p class="service-desc">
@@ -195,7 +218,7 @@
             </p>
           </div>
           <div class="service-left-side">
-            <img src="./images/chefcooking.jpg" alt="" class="service-img" />
+            <img src="./images/chefcooking.webp" alt="" class="service-img" />
           </div>
         </div>
       </div>
@@ -203,7 +226,7 @@
     <!-- lunch -->
     <section id="lunch">
       <div class="container">
-        <div class="my-title-wrapper" data-aos="fade-up">
+        <div class="my-title-wrapper" data-aos="fade-left">
           <h1 class="myWorker-title">What we offer:</h1>
           <p class="myWork-desc">
             We offer freshly prepared homemade lunch meals made daily with
@@ -213,7 +236,7 @@
           </p>
         </div>
         <div class="my-title-wrapper">
-          <h2 class="myWork-subtitle" data-aos="fade-up">1. our lunch</h2>
+          <h2 class="myWork-subtitle" data-aos="fade-left">1. our lunch</h2>
           <p class="myWork-desc" data-aos="fade-right">
             Enjoy fresh, home-cooked lunches prepared every day using quality
             ingredients and great recipes. We offer delicious meals delivered
@@ -223,68 +246,14 @@
           </p>
         </div>
         <div class="myWork-wrapper">
-          <div class="myWork-item-grid">
-            <div class="myWork-item" data-aos="fade-up">
-              <div class="myWork-img">
-                <img src="./images/meatrice.png" alt="lattecoffee" />
-              </div>
-              <div class="myWork-info">
-                <h2 class="myWork-item-title">rice and chicken</h2>
-                <p class="myWork-item-desc">
-                  Freshly prepared rice and chicken served with a complimentary
-                  juice and fresh chili at no extra cost.
-                </p>
-                <h1 class="myWork-item-price">kshs.250</h1>
-                <a
-                  href="order.html?item=Rice%20and%20Chicken&price=250"
-                  class="primary-btn btn"
-                  >order now</a
-                >
-              </div>
-            </div>
-            <div class="myWork-item" data-aos="fade-up">
-              <div class="myWork-img">
-                <img src="./images/chicken&rice.png" alt="lattecoffee" />
-              </div>
-              <div class="myWork-info">
-                <h2 class="myWork-item-title">rice and meat</h2>
-                <p class="myWork-item-desc">
-                  Freshly prepared rice and chicken served with a complimentary
-                  juice and fresh chili at no extra cost.
-                </p>
-                <h1 class="myWork-item-price">kshs.250</h1>
-                <a
-                  href="order.html?item=Rice%20and20%Meat&price=250"
-                  class="primary-btn btn"
-                  >order now</a
-                >
-              </div>
-            </div>
-            <div class="myWork-item" data-aos="fade-up">
-              <div class="myWork-img">
-                <img src="./images/ugaali.png" alt="lattecoffee" />
-              </div>
-              <div class="myWork-info">
-                <h2 class="myWork-item-title">rice and chicken</h2>
-                <p class="myWork-item-desc">
-                  Freshly prepared rice and chicken served with a complimentary
-                  juice and fresh chili at no extra cost.
-                </p>
-                <h1 class="myWork-item-price">kshs.250</h1>
-                <a
-                  href="order.html?item=Ugali20%and20%Caloole&price=250"
-                  class="primary-btn btn openModal"
-                  >order now</a
-                >
-              </div>
-            </div>
+          <div class="myWork-item-grid" id="lunchContainer">
           </div>
         </div>
       </div>
     </section>
     <!-- end of lunch -->
     <!-- cakes -->
-    <section id="lunch">
+    <section id="cakes">
       <div class="container">
         <!-- coffee -->
         <div class="my-title-wrapper">
@@ -306,7 +275,10 @@
             <button class="filter-btn" id="vanillaCakes">vanilla</button>
             <button class="filter-btn" id="strawberry">strawberry</button>
           </div>
-          <div class="myWork-item-grid" id="foodContainer"></div>
+          <div class="myWork-item-grid" id="homePageContainer"></div>
+          <div class="our-menu-link">
+            <a href="./menu.html" class="btn primary-btn">view our menu</a>
+          </div>
         </div>
       </div>
       <!-- end of coffee -->
@@ -424,10 +396,9 @@
             <div class="footer-col1">
               <h3 class="footer-title">menu</h3>
               <ul>
-                <li><a href="#schoolOfBarista">school of barista</a></li>
-                <li><a href="#courses">school of bakery</a></li>
+                <li><a href="#courses">about me</a></li>
                 <li><a href="#contacts">contact</a></li>
-                <li><a href="#">home</a></li>
+                <li><a href="./index.html">home</a></li>
               </ul>
             </div>
             <div class="footer-col1">
@@ -463,8 +434,8 @@
             <div class="footer-col1">
               <h3 class="footer-title">socials</h3>
               <ul>
-                <li><a href="./about.html">instagram</a></li>
-                <li><a href="./mywork.html">tiktok</a></li>
+                <li><a href="./">instagram</a></li>
+                <li><a href="https://www.tiktok.com/@_.chef_ali">tiktok</a></li>
               </ul>
             </div>
           </div>
@@ -531,6 +502,10 @@
       </svg>
     </a>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="index.js"></script>
+    <script src="./js/product.js"></script>
+    <script src="./js/render.js"></script>
+    <script src="./js/filter.js"></script>
+    <script src="./js/index.js"></script>
+
   </body>
 </html>
