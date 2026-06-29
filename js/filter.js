@@ -62,4 +62,3 @@ const findingRelated = (selectedProduct) => {
     renderedItems(related, relatedContainer);
 };
 
-console.log(findingId)

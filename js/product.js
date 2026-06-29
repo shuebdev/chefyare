@@ -16,6 +16,24 @@ const foods = [
     type: "chocolate",
     desc: "Rich, moist, and packed with deep chocolate flavor. Freshly baked and beautifully decorated, perfect for birthdays, celebrations, or satisfying your chocolate cravings.",
     price: "Kshs." + lunchPrice,
+
+     size: [
+      {
+        size: "300g",
+        price: 500,
+        stock: 9
+      },
+      {
+        size: "700g",
+        price: 700,
+        stock: 7
+      },
+      {
+        size: "1kg",
+        price: 1500,
+        stock: 7
+      }
+    ]
   },
   {
     id: 1,
@@ -26,6 +44,24 @@ const foods = [
     type: "chocolate",
     desc: "Rich, moist, and packed with deep chocolate flavor. Freshly baked and beautifully decorated, perfect for birthdays, celebrations, or satisfying your chocolate cravings.",
     price: "Kshs." + lunchPrice,
+
+    size: [
+      {
+        size: "300g",
+        price: 500,
+        stock: 9
+      },
+      {
+        size: "700g",
+        price: 700,
+        stock: 7
+      },
+      {
+        size: "1kg",
+        price: 1500,
+        stock: 7
+      }
+    ]
   },
   {
     id: 2,
@@ -37,6 +73,24 @@ const foods = [
     name: "Vanilla Cake",
     desc: "Light, fluffy, and perfectly sweet. Made with premium ingredients and ideal for custom designs, birthdays, and family celebrations.",
     price: lunchPrice,
+
+    size: [
+      {
+        size: "300g",
+        price: 500,
+        stock: 9
+      },
+      {
+        size: "700g",
+        price: 700,
+        stock: 7
+      },
+      {
+        size: "1kg",
+        price: 1500,
+        stock: 7
+      }
+    ]
   },
   {
     id: 3,
@@ -47,6 +101,24 @@ const foods = [
     type: "cheese",
     desc: "Soft, velvety layers with smooth cream cheese frosting. A classic favorite that adds elegance and sweetness to every special occasion.",
     price: lunchPrice,
+
+    size: [
+      {
+        size: "300g",
+        price: 500,
+        stock: 9
+      },
+      {
+        size: "700g",
+        price: 700,
+        stock: 7
+      },
+      {
+        size: "1kg",
+        price: 1500,
+        stock: 7
+      }
+    ]
   },
   {
     id: 4,
@@ -57,6 +129,23 @@ const foods = [
     type: "chocolate",
     desc: "Layers of chocolate sponge, fresh cream, and cherries combined into a rich and delightful cake that everyone will love.",
     price: lunchPrice,
+    size: [
+      {
+        size: "300g",
+        price: 500,
+        stock: 9
+      },
+      {
+        size: "700g",
+        price: 700,
+        stock: 7
+      },
+      {
+        size: "1kg",
+        price: 1500,
+        stock: 7
+      }
+    ]
   },
   {
     id: 5,
@@ -67,6 +156,24 @@ const foods = [
     type: "strawberry",
     desc: "Fresh strawberry flavor blended with soft sponge and creamy frosting for a refreshing and delicious dessert experience.",
     price: lunchPrice,
+
+    size: [
+      {
+        size: "300g",
+        price: 500,
+        stock: 9
+      },
+      {
+        size: "700g",
+        price: 700,
+        stock: 7
+      },
+      {
+        size: "1kg",
+        price: 1500,
+        stock: 7
+      }
+    ]
   },
   {
     id: 6,
@@ -77,6 +184,24 @@ const foods = [
     type: "fruit",
     desc: "Fresh strawberry flavor blended with soft sponge and creamy frosting for a refreshing and delicious dessert experience.",
     price: lunchPrice,
+
+    size: [
+      {
+        size: "300g",
+        price: 500,
+        stock: 9
+      },
+      {
+        size: "700g",
+        price: 700,
+        stock: 7
+      },
+      {
+        size: "1kg",
+        price: 1500,
+        stock: 7
+      }
+    ]
   },
   {
     id: 7,
@@ -86,6 +211,24 @@ const foods = [
     type: "cheese",
     desc: "Fresh strawberry flavor blended with soft sponge and creamy frosting for a refreshing and delicious dessert experience.",
     price: lunchPrice,
+
+    size: [
+      {
+        size: "300g",
+        price: 500,
+        stock: 9
+      },
+      {
+        size: "700g",
+        price: 700,
+        stock: 7
+      },
+      {
+        size: "1kg",
+        price: 1500,
+        stock: 7
+      }
+    ]
   },
   {
     id: 11,
@@ -95,6 +238,7 @@ const foods = [
     type: "rice",
     desc: "Freshly prepared rice and chicken served with a complimentary uice and fresh chili at no extra cost.",
     price: lunchPrice,
+    size: []
   },
   {
     id: 12,
@@ -104,6 +248,7 @@ const foods = [
     type: "rice",
     desc: "Freshly prepared rice and chicken served with a complimentary uice and fresh chili at no extra cost.",
     price: lunchPrice,
+    size: []
   },
   {
     id: 13,
@@ -113,7 +258,9 @@ const foods = [
     type: "rice",
     desc: "Freshly prepared rice and chicken served with a complimentary uice and fresh chili at no extra cost.",
     price: lunchPrice,
+    size: []
   },
 ];
 
 findingId();
+
