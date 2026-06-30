@@ -24,9 +24,6 @@ const renderedItems = (item, container) => {
 
 const renderedselected = (item) => {
   const container = document.getElementById("selectedProduct");
-
-  console.log(item);
-  console.log(item.size);
   container.innerHTML = `
     <div class="product-img">
             <img src="${item.image}" alt="${item.name}" />
@@ -121,14 +118,11 @@ const renderedselected = (item) => {
             </div>
           </div>
   `;
-  console.log(item.size);
 };
 
 // render sizes
 
 const renderedCakeBtn = (sizes) => {
-  console.log(sizes);
-
   let html = "";
 
   sizes.forEach((size) => {

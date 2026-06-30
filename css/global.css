@@ -11,11 +11,11 @@ body {
   text-transform: capitalize;
   background-color: var(--blue-1);
   overflow-x: hidden;
-  position: relative;
+
   padding-top: 80px;
   scroll-behavior: smooth;
 }
-@media only screen and (max-width: 578px) {
+@media only screen and (max-width: 678px) {
   body{
     padding-top: 0;
     padding-bottom: 60px;

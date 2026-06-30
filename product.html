@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/cart.css" />
     <link rel="stylesheet" href="./css/product.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -147,7 +148,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="primary-btn btn openModal navbtn">
+                  <a href="#" class="primary-btn btn openModal navbtn" id="cartBtn">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -177,7 +178,6 @@
     <section id="product">
       <div class="container">
         <div class="product-wrapper" id="selectedProduct">
-
           <!--  -->
         </div>
       </div>
@@ -187,6 +187,123 @@
         <div class="myWork-wrapper">
           <h1 class="render-title">you may also like</h1>
           <div class="myWork-item-grid" id="relatedContainer"></div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="cart-modal" id="cartModal">
+        <div id="closeBtn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </div>
+        <h1 class="cart-title">your cart</h1>
+        <div class="container">
+          <div class="cart-modal-wrapper">
+            <div class="cart-item-img">
+              <img
+                src="./images/coconutcake.webp"
+                alt="cake image"
+                class="cart-img"
+              />
+            </div>
+            <div class="cart-item-info">
+              <h1 class="cart-item-name">
+                product name:
+                <span class="product-name-value">chocolate cake</span>
+              </h1>
+              <h1 class="cart-item-size">
+                size:<span class="product-name-value"> 700g</span>
+              </h1>
+              <h1 class="cart-item-quantity">
+                price:<span class="product-name-value">ksh 250</span>
+              </h1>
+               <h1 class="cart-item-quantity">
+                sub total:<span class="product-name-value">kshs 24,000</span>
+              </h1>
+              <div class="bgOverlay"></div>
+              <div class="btn-wrapper">
+                <div class="quantity">
+                  <button class="minunBtn">
+                    <!-- https://feathericons.dev/?search=minus&iconset=feather -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                      class="main-grid-item-icon"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <line x1="5" x2="19" y1="12" y2="12" />
+                    </svg>
+                  </button>
+                  <span id="total">1</span>
+                  <button class="addBtn">
+                    <!-- https://feathericons.dev/?search=plus&iconset=feather -->
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                      class="main-grid-item-icon"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    >
+                      <line x1="12" x2="12" y1="5" y2="19" />
+                      <line x1="5" x2="19" y1="12" y2="12" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="remove">
+                  <button class="deleteBtn">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <polyline points="3 6 5 6 21 6" />
+                      <path
+                        d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                      />
+                    </svg>
+                    <span>remove</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="check-wrapper" id="check-wrapper">
+              <button class="checkoutBtn" id="checkoutBtn">
+                checkout <span id="subTotal">(ksh 23,000)</span>
+              </button>
+              <button class="cont-shopping" id="contShopping">
+                continue shopping
+              </button>
+            </div>
         </div>
       </div>
     </section>
@@ -252,5 +369,6 @@
     <script src="./js/render.js"></script>
     <script src="./js/filter.js"></script>
     <script src="./js/product.js"></script>
+    <script src="./js/cart.js"></script>
   </body>
 </html>
