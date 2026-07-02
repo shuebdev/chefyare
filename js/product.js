@@ -33,7 +33,9 @@ const foods = [
         price: 1500,
         stock: 7
       }
-    ]
+    ],
+
+    quantity: 1,
   },
   {
     id: 1,
@@ -61,7 +63,8 @@ const foods = [
         price: 1500,
         stock: 7
       }
-    ]
+    ],
+    quantity: 1,
   },
   {
     id: 2,
@@ -90,7 +93,9 @@ const foods = [
         price: 1500,
         stock: 7
       }
-    ]
+    ],
+
+    quantity: 1,
   },
   {
     id: 3,
@@ -118,7 +123,9 @@ const foods = [
         price: 1500,
         stock: 7
       }
-    ]
+    ],
+
+    quantity: 1,
   },
   {
     id: 4,
@@ -145,7 +152,9 @@ const foods = [
         price: 1500,
         stock: 7
       }
-    ]
+    ],
+
+    quantity: 1,
   },
   {
     id: 5,
@@ -173,7 +182,9 @@ const foods = [
         price: 1500,
         stock: 7
       }
-    ]
+    ],
+
+    quantity: 1,
   },
   {
     id: 6,
@@ -201,7 +212,9 @@ const foods = [
         price: 1500,
         stock: 7
       }
-    ]
+    ],
+
+    quantity: 1,
   },
   {
     id: 7,
@@ -228,7 +241,9 @@ const foods = [
         price: 1500,
         stock: 7
       }
-    ]
+    ],
+
+    quantity: 1,
   },
   {
     id: 11,
@@ -238,7 +253,9 @@ const foods = [
     type: "rice",
     desc: "Freshly prepared rice and chicken served with a complimentary uice and fresh chili at no extra cost.",
     price: lunchPrice,
-    size: []
+    size: [],
+
+    quantity: 1,
   },
   {
     id: 12,
@@ -248,7 +265,9 @@ const foods = [
     type: "rice",
     desc: "Freshly prepared rice and chicken served with a complimentary uice and fresh chili at no extra cost.",
     price: lunchPrice,
-    size: []
+    size: [],
+
+    quantity: 1,
   },
   {
     id: 13,
@@ -258,7 +277,9 @@ const foods = [
     type: "rice",
     desc: "Freshly prepared rice and chicken served with a complimentary uice and fresh chili at no extra cost.",
     price: lunchPrice,
-    size: []
+    size: [],
+
+    quantity: 1,
   },
 ];
 

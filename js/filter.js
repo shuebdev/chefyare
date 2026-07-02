@@ -61,4 +61,3 @@ const findingRelated = (selectedProduct) => {
 
     renderedItems(related, relatedContainer);
 };
-

@@ -11,7 +11,6 @@ body {
   text-transform: capitalize;
   background-color: var(--blue-1);
   overflow-x: hidden;
-
   padding-top: 80px;
   scroll-behavior: smooth;
 }
@@ -25,7 +24,6 @@ html {
   font-size: 10px;
   scrollbar-width: thin;
   scrollbar-color: var(--blue-2) var(--blue-1);
-  overflow-y: scroll;
   scroll-behavior: smooth;
 }
 * {
