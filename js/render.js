@@ -70,11 +70,8 @@ const renderedselected = (item) => {
                 </svg>
               </button>
             </div>
-            <div class="sizes-btn" id="sizesBtn">
-              ${renderedCakeBtn(item.size)}
-            </div>
             <div class="product-buttons" id="productButtons">
-              <button class="add-to-cart" id="addToCart">
+              <button class="add-to-cart" id="addToCart" data-id="${item.id}">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -118,18 +115,9 @@ const renderedselected = (item) => {
             </div>
           </div>
   `;
+
+  
 };
 
-// render sizes
 
-const renderedCakeBtn = (sizes) => {
-  let html = "";
 
-  sizes.forEach((size) => {
-    html += `
-    <button>${size.size}</button>
-
-    `;
-  });
-  return html;
-};

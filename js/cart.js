@@ -1,5 +1,4 @@
 // cart modal
-
 const cartModel = document.querySelector(".cart-modal");
 const closeBtn = document.getElementById("closeBtn");
 const cartBtn = document.getElementById("cartBtn");
@@ -19,18 +18,8 @@ const closeCart = () => {
 };
 
 // init
-closeBtn.addEventListener("click", (e) => {
-    if (e.target.id === "closeBtn")
-    {
-        closeCart();
-    }
-});
-cartBtn.addEventListener("click", (e) => {
-    if (e.target.id === "cartBtn")
-    {
-        openCart();
-    }
-});
+closeBtn.addEventListener("click", closeCart);
+cartBtn.addEventListener("click", openCart);
 
 // cart system
 
@@ -53,25 +42,6 @@ const emptyRenderedCart = () => {
 // empty cart html code
 
 const emptyCartHtml = `
-              <div class="cart-modal" id="cartModal">
-        <div id="closeBtn">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <line x1="18" y1="6" x2="6" y2="18" />
-            <line x1="6" y1="6" x2="18" y2="18" />
-          </svg>
-        </div>
-        <h1 class="cart-title">your cart</h1>
-        <div class="container">
           <div class="cart-modal-wrapper-2">
             <div class="cart-alert">
               <svg
@@ -98,60 +68,9 @@ const emptyCartHtml = `
             </div>
           </div>
         </div>
-        <div class="check-wrapper" id="check-wrapper">
-          <button class="cont-shopping" id="contShopping">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
-              <line x1="3" y1="6" x2="21" y2="6" />
-              <path d="M16 10a4 4 0 0 1-8 0" />
-            </svg>
-            <span class="continue-desc">continue shopping</span>
-          </button>
-        </div>
-        <!--  -->
-      </div>
             `;
 
 // active cart rendering
-
-// header cart render
-
-const renderedHeader = () => {
-  let html = `
-     
-    <div class="cart-modal" id="cartModal">
-      <div id="closeBtn">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <line x1="18" y1="6" x2="6" y2="18" />
-          <line x1="6" y1="6" x2="18" y2="18" />
-        </svg>
-      </div>
-      <h1 class="cart-title">your cart</h1>
-      <div class="container">
-    `;
-
-  return html;
-};
 
 // render items
 
@@ -175,7 +94,7 @@ const renderItems = (items) => {
               <span class="product-name-value">${item.name}</span>
             </h1>
             <h1 class="cart-item-size">
-              size:<span class="product-name-value">${item.size}</span>
+              size:<span class="product-name-value"></span>
             </h1>
             <h1 class="cart-item-quantity">
               price:<span class="product-name-value">${item.price} x ${item.quantity}</span>
@@ -186,7 +105,7 @@ const renderItems = (items) => {
             <div class="bgOverlay"></div>
             <div class="btn-wrapper">
               <div class="quantity">
-                <button class="minunBtn" data-id = "${item.id}" data-size = "${item.size}">
+                <button class="minusBtn" data-id = "${item.id}">
                   <!-- https://feathericons.dev/?search=minus&iconset=feather -->
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -204,7 +123,7 @@ const renderItems = (items) => {
                   </svg>
                 </button>
                 <span id="total">1</span>
-                <button class="addBtn" data-id = "${item.id}" data-size = "${item.size}>
+                <button class="addBtn" data-id = "${item.id}">
                   <!-- https://feathericons.dev/?search=plus&iconset=feather -->
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -252,46 +171,21 @@ const renderItems = (items) => {
 
   return html;
 };
-
-// render footer
-
-const renderFooter = () => {
-  let html = "";
-
-  html = `
-    /div>
-      <div class="check-wrapper" id="check-wrapper">
-        <button class="checkoutBtn" id="checkoutBtn">
-          checkout <span id="subTotal">(ksh 23,000)</span>
-        </button>
-        <button class="cont-shopping" id="contShopping">
-          continue shopping
-        </button>
-      </div>
-    </div>
-    `;
-
-  return html;
-};
-
 // whole cart render
 const renderCart = () => {
   const cartContainer = document.getElementById("cartSystem");
 
   cartContainer.innerHTML = `
-      ${renderedHeader()}
-      ${renderItem(cart)}
-      ${renderFooter()}
+      ${renderItems(cart)}
     `;
-
-    initAddBtn();
-    minusBtnInit();
+  initAddBtn();
+  minusBtnInit();
 };
 
 // add button logic
-const addbtnLogic = (id, size) => {
+const addbtnLogic = (id) => {
   const item = cart.find((item) => {
-    return item.id === id && item.size === size;
+    return item.id === id;
   });
 
   if (!item) return;
@@ -308,63 +202,102 @@ const initAddBtn = () => {
 
   quantityAddButtons.forEach((button) => {
     button.addEventListener("click", () => {
-        Number(button.dataset.id);
-        const id = Number(button.dataset.id);
-        const size = button.dataset.size;
+      Number(button.dataset.id);
+      const id = Number(button.dataset.id);
 
-        addbtnLogic(id, size);
+      addbtnLogic(id);
     });
   });
 };
 // updating cart
-const updateCart = () =>
-{
-    saveCart();
-    renderCart();
-}
+const updateCart = () => {
+  saveCart();
+  renderCart();
+};
 
 // minus button logic
 
-const MinusBtnLogic = (id, size) =>
-{
-    const item = cart.find((item) => {
-        return item.id === id && item.size === size;
-    });
+const MinusBtnLogic = (id, size) => {
+  const item = cart.find((item) => {
+    return item.id === id;
+  });
 
-    if (!item ) return;
+  if (!item) return;
 
-    if (item.quantity > 1)
-    {
-        item.quantity--;
+  if (item.quantity > 1) {
+    item.quantity--;
 
-        updateCart();
-    }
-
-}
+    updateCart();
+  }
+};
 
 // minus btn init
 
-const minusBtnInit = () => 
-{
-    const quantityMinusButtons = document.querySelectorAll(".minusBtn");
+const minusBtnInit = () => {
+  const quantityMinusButtons = document.querySelectorAll(".minusBtn");
 
-    quantityMinusButtons.forEach((button) =>{
-        button.addEventListener("click", () =>{
-            const id = Number(button.dataset.id);
-            const size = button.dataset.size;
+  quantityMinusButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const id = Number(button.dataset.id);
+    
 
-            MinusBtnLogic(id, size);
-        })
+      MinusBtnLogic(id);
     });
-}
+  });
+};
 
 // cart logic render
 
-if (cart.length === 0)
-{
-    emptyRenderedCart();
+if (cart.length === 0) {
+  emptyRenderedCart();
+} else {
+  renderCart();
 }
-else
-{
-    renderCart();
+
+// cart addToBtn logic
+
+const addToCartLogic = (id,) => {
+  // finding product
+
+  const selectedProduct = foods.find((food) => {
+    return food.id === id;
+  });
+
+
+  console.log(selectedSizeObject);
+  // finding duplicate items
+  const checkItem = cart.find((item) => {
+    return item.id === id;
+  });
+
+  // addtocart statement
+
+  if (checkItem) {
+    checkItem.quantity++;
+  } else {
+    cart.push({
+      id: selectedProduct.id,
+      name: selectedProduct.name,
+      image: selectedProduct.image,
+      quantity: 1,
+    });
+  }
+
+  updateCart();
+};
+
+// add to cart buttons
+const addToCartFunc = () => {
+const addToCartBtns = document.querySelectorAll(".add-to-cart");
+
+addToCartBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const id = Number(btn.dataset.id);
+    addToCartLogic(id,);
+  });
+});
 }
+window.initButton = function (){
+  addToCartFunc();
+}
+

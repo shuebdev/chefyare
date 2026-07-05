@@ -10,7 +10,7 @@
   padding: 2rem 1.5rem;
   overflow-y: auto;
   display: flex;
-  transform: translateY(100);
+  transform: translateY(-100%);
   transition: transform 0.3s ease-in;
   flex-direction: column;
 }
@@ -253,6 +253,7 @@
     height: 40px;
 }
 .alert-desc{
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    text-align: center;
 }
 
