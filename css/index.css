@@ -262,7 +262,6 @@ footer li a:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 2rem;
 }
 .myWork-desc {
   text-align: center;
@@ -469,12 +468,11 @@ footer li a:hover {
 }
 /* end my work styles */
 .myWork-subtitle {
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
-  color: var(--black-2);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--black-1);
   font-weight: 400;
   text-align: center;
-  text-decoration: underline dashed;
 }
 .myWork-dessert-title {
   text-align: center;
@@ -635,4 +633,16 @@ footer li a:hover {
     flex: 0 0 180px; /* Prevent shrinking */
     scroll-snap-align: start;
   }
+}
+
+.section-title {
+  font-size: 1.8rem;
+  text-align: left;
+  font-family: 'Raleway';
+  font-weight: 600;
+}
+.myWork-wrapper {
+  display: flex;
+  gap: 0.2rem;
+  flex-direction: column;
 }

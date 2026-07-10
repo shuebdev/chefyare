@@ -25,6 +25,7 @@ html {
   scrollbar-width: thin;
   scrollbar-color: var(--blue-2) var(--blue-1);
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 * {
   margin: 0;
@@ -41,7 +42,7 @@ section {
 }
 @media only screen and (max-width: 768px) {
   section {
-    padding: 30px 0;
+    padding: 20px 0;
   }
 }
 a {

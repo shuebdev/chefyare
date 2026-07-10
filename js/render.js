@@ -1,8 +1,8 @@
-const renderedItems = (item, container) => {
-  container.innerHTML = "";
 
-  item.forEach((food) => {
-    container.innerHTML += `
+const renderedItems = (items, container) => {
+
+  container.innerHTML = items.map((food) => {
+    return `
     <a href="product.html?id=${food.id}" class="myWork-item" >
           
               <div class="myWork-img">
@@ -19,8 +19,10 @@ const renderedItems = (item, container) => {
             </a>
             
     `;
-  });
+  })
+  .join("");
 };
+
 
 const renderedselected = (item) => {
   const container = document.getElementById("selectedProduct");
@@ -118,6 +120,3 @@ const renderedselected = (item) => {
 
   
 };
-
-
-

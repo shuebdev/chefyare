@@ -93,9 +93,6 @@ const renderItems = (items) => {
               product name:
               <span class="product-name-value">${item.name}</span>
             </h1>
-            <h1 class="cart-item-size">
-              size:<span class="product-name-value"></span>
-            </h1>
             <h1 class="cart-item-quantity">
               price:<span class="product-name-value">${item.price} x ${item.quantity}</span>
             </h1>
@@ -217,7 +214,7 @@ const updateCart = () => {
 
 // minus button logic
 
-const MinusBtnLogic = (id, size) => {
+const MinusBtnLogic = (id) => {
   const item = cart.find((item) => {
     return item.id === id;
   });
@@ -256,7 +253,7 @@ if (cart.length === 0) {
 
 // cart addToBtn logic
 
-const addToCartLogic = (id,) => {
+const addToCartLogic = (id) => {
   // finding product
 
   const selectedProduct = foods.find((food) => {
@@ -264,7 +261,7 @@ const addToCartLogic = (id,) => {
   });
 
 
-  console.log(selectedSizeObject);
+
   // finding duplicate items
   const checkItem = cart.find((item) => {
     return item.id === id;
@@ -280,6 +277,7 @@ const addToCartLogic = (id,) => {
       name: selectedProduct.name,
       image: selectedProduct.image,
       quantity: 1,
+      price: selectedProduct.price
     });
   }
 
@@ -292,6 +290,7 @@ const addToCartBtns = document.querySelectorAll(".add-to-cart");
 
 addToCartBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
+    console.log("Add to cart clicked");
     const id = Number(btn.dataset.id);
     addToCartLogic(id,);
   });
