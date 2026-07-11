@@ -32,7 +32,7 @@ const renderedselected = (item) => {
           </div>
           <div class="product-info">
             <h1 class="product-name">${item.name}</h1>
-            <p class="product-desc">${item.desc}</p>
+            <p class="product-desc">${item.description}</p>
             <h3 class="product-price">${item.price}</h3>
             <div class="quantity">
               <button class="minunBtn">
@@ -113,7 +113,7 @@ const renderedselected = (item) => {
             </div>
             <div class="desc-item">
               <h1 class="desc-title">description</h1>
-              <p class="desc-item-desc">${item.desc}</p>
+              <p class="desc-item-desc">${item.details}</p>
             </div>
           </div>
   `;

@@ -2,7 +2,7 @@
 const filteredLunch = () => {
   const lunchContainer = document.getElementById("lunchContainer");
   const lunch = foods.filter((food) => {
-    return food.category === "food";
+    return food.category === CATEGORY.MEAL;
   });
 
   renderedItems(lunch, lunchContainer);
@@ -13,7 +13,7 @@ const filteredLunch = () => {
 const filteredcakes = () => {
     const cakeContainer = document.getElementById("cakeContainer");
     const cakes = foods.filter((food) => {
-        return food.category === "cake"
+        return food.category === CATEGORY.CAKE;
     });
 
     renderedItems(cakes, cakeContainer);
@@ -24,7 +24,7 @@ const filteredcakes = () => {
 const filteredHomePageCakes = () => {
     const homePageCakesContainer = document.getElementById("homePageContainer")
     const homePageCakes = foods.filter((food) => {
-        return food.render === "home"
+        return food.featured === true;
     });
 
     renderedItems(homePageCakes, homePageCakesContainer);
@@ -36,7 +36,7 @@ const filtereddesserts = () => {
     const dessertContainer = document.getElementById("dessertContainer");
 
     const desserts = foods.filter((food) => {
-        return food.category === "desserts"
+        return food.category === CATEGORY.DESSERT;
     });
 
     renderedItems(desserts, dessertContainer);

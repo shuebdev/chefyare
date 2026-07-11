@@ -37,12 +37,32 @@ so i paused on javascript and decided to learn call back and promises to underst
 ### bugs
  1. items did not render and the data array didn't display
    - Reason
-       2. the product object did not have the details and the key had no value
+       1. the product object did not have the details and the key had no value
    - why 
        1. i wanted  them to be like that so i could insert the values later after
        making the system
    - lesson learnt
       1. key value in an objects array must have data or it will break the data 
       2. you cannot reserve objects with keys but no value
+     
+   ### task to complete
+
+   - [ ] all product data must be filled out
+   - [ ] style the why choose us section
+   - [ ] start the menu.html structure
+   - [ ] make 4 useful commit
+
+### project update:
+
+ Yesterday i met my big bro who is a computer engineer and probably he is a graduate i think he is capable of designing, creating and maintaining a backend for this website. I really wanted to contribute with him but my skills are not on that level so he will be documenting about the backend and maybe the frontend (although i won't accept it).
+
+### message for the backend developer
+ one thing if you are reading Zaki i have been putting all my time and energy on this project so i hope you will bring the same energy 
+
+ i know you are a proffesional but please make docs on how you did it and every decision you made and why and you can also leave an advise
+
+ after you decide which database you will use you will find the product data is on `product.js`
+
+  
 
 
