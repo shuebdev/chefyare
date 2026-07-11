@@ -50,6 +50,28 @@ const findingId = () => {
 
 };
 
+// filtered categories and type logic
+
+const filterAndRenderLogic = (category, type, containerId) => {
+    
+    const filteredcategory = foods.filter(
+        (food) => {
+            return(
+                food.category === category && food.type === type
+            );
+        }
+    );
+
+    renderedItems (filteredcategory, document.getElementById(containerId));
+}
+// filtered vanilla cakes 
+
+const filteredVanillaCakes = () => {
+
+    filterAndRenderLogic (cakesCategory, vanillaType, "vanillaCakeContainer");
+}
+
+
 const findingRelated = (selectedProduct) => {
     const relatedContainer = document.getElementById("relatedContainer");
     const related = foods.filter(food => {

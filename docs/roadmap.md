@@ -104,7 +104,7 @@
 ---
 
 # Future Ideas
-
+ After learning backend development: 
 - [ ] Admin dashboard
 - [ ] Online payment
 - [ ] Customer accounts
