@@ -11,7 +11,7 @@ const renderedItems = (items, container) => {
               <div class="myWork-info">
                 <h2 class="myWork-item-title">${food.name}</h2>
                 <p class="myWork-item-desc">
-                  ${food.desc}
+                  ${food.description}
                 </p>
                 <h1 class="myWork-item-price">ksh ${food.price}</h1>
               </div>

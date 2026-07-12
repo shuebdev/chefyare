@@ -4,6 +4,9 @@
   position: fixed;
   width: 100%;
   height: 80px;
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 10px 15px rgba(0, 0, 0, 0.08);
   z-index: 999999;
   top: 0;
 }
@@ -151,7 +154,7 @@
     margin-bottom: 1rem;
     color: var(--blue-2);
   }
-  .about-desc{
+  .about-desc {
     font-size: 1.4rem;
   }
 }
@@ -640,7 +643,7 @@ footer li a:hover {
 .section-title {
   font-size: 1.8rem;
   text-align: left;
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-weight: 600;
 }
 .myWork-wrapper {
@@ -651,9 +654,9 @@ footer li a:hover {
 
 /* ? why choose styles */
 .why-choose-wrapper {
- display: grid;
- grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
- gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
 }
 
 .why-choose-item {
@@ -661,12 +664,19 @@ footer li a:hover {
   flex-direction: column;
   background-color: var(--light-blue);
   gap: 1rem;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   padding: 1rem;
   align-items: center;
   border-radius: 1.2rem;
 }
 
-.why-choose-icon svg{
+.why-choose-item:hover {
+    transform: scale(1.05);
+}
+.why-choose-icon svg {
   width: 70px;
   height: 70px;
   color: var(--blue-2);
@@ -700,5 +710,30 @@ footer li a:hover {
   font-size: 1.4rem;
   text-align: center;
 }
+/* desktop design */
+@media only screen and (min-width: 768px) {
+  .why-choose-wrapper {
+    grid-template-columns: repeat(2, 300px);
+    justify-content: center;
+  }
+  .why-choose-desc {
+    font-size: 1.8rem;
+    max-width: 450px;
+    margin-bottom: 1rem;
+  }
+
+  .why-choose-title-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #lunch {
+    padding: 30px 0;
+  }
+}
+/* end of desktop design */
 
 /* ? end of why choose styles */

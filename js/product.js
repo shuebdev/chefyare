@@ -391,6 +391,45 @@ const foods = [
     price: lunchPrice,
     details: null,
 },
+{
+    id: 33,
+    image: "./images/briyanichicken.png",
+    name: "chicken biryani",
+    category: CATEGORY.MEAL,
+    type: "rice",
+    occasion: null,
+    featured: false,
+    description: 
+          "Fragrant chicken biryani served with tender, well-seasoned chicken and a complimentary 300ml mango juice.",
+    price: lunchPrice,
+    details: null,
+},
+{
+    id: 34,
+    image: "./images/whitericechicken.png",
+    name: "Vegetable Rice & Chicken",
+    category: CATEGORY.MEAL,
+    type: "rice",
+    occasion: null,
+    featured: false,
+    description: 
+        "Steamed vegetable white rice paired with juicy roasted chicken and a free 300ml mango juice.",
+    price: lunchPrice,
+    details: null,
+},
+{
+    id: 35,
+    image: "./images/ricecurrysoup.png",
+    name: "rice curry soup",
+    category: CATEGORY.MEAL,
+    type: "rice",
+    occasion: null,
+    featured: false,
+    description: 
+        "Aromatic pilau served with rich chicken curry soup and a complimentary 300ml mango juice.",
+    price: lunchPrice,
+    details: null,
+},
 ];
 
 findingId();
