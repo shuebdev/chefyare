@@ -6,7 +6,7 @@
   height: 100vh;
   background: var(--blue-1);
   box-shadow: -8px 0 30px rgba(0, 0, 0, 0.15);
-  z-index: 9999;
+  z-index: 999999;
   padding: 2rem 1.5rem;
   overflow-y: auto;
   display: flex;

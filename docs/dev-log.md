@@ -11,9 +11,9 @@
  ## friday 10/7/2026
 
  ### Tasks 
-   - [ ] reviewing homepage design
-   - [ ] removing the service section from home page
-   - [ ] replacing about section 
+   - [x] reviewing homepage design
+   - [x] removing the service section from home page
+   - [x] replacing about section 
    - [ ] adding testimonials
  
  
@@ -62,6 +62,38 @@ so i paused on javascript and decided to learn call back and promises to underst
  i know you are a proffesional but please make docs on how you did it and every decision you made and why and you can also leave an advise
 
  after you decide which database you will use you will find the product data is on `product.js`
+
+
+ ## sunday 12/7/2026
+
+ ### task
+
+ I polished the home page by fixing the bugs that were rendered on home page
+
+ ### bugs
+
+ 1. invisible padding between the sections 
+    
+  #### reason 
+  a padding 100px value on the global.css and additional margin by reset.css
+
+  #### solution 
+  giving each section its own padding by targetng their ids
+
+ ### accomplishment 
+  no bugs in homepage
+
+  ### plan 
+  fixing the footer links and contact information 
+
+  ## monday 13/7/2026
+
+  ### task completed 
+
+  added 10 product data array and its details on product.js
+   
+
+
 
   
 

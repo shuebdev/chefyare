@@ -292,7 +292,7 @@ addToCartBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     console.log("Add to cart clicked");
     const id = Number(btn.dataset.id);
-    addToCartLogic(id,);
+    addToCartLogic(id);
   });
 });
 }

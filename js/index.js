@@ -55,4 +55,6 @@ AOS.init({
 
 filteredLunch();
 filteredHomePageCakes();
+filteredVanillaCakes();
 
+console.log(filteredVanillaCakes())

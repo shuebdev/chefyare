@@ -13,7 +13,7 @@ const renderedItems = (items, container) => {
                 <p class="myWork-item-desc">
                   ${food.description}
                 </p>
-                <h1 class="myWork-item-price">ksh ${food.price}</h1>
+                <h1 class="myWork-item-price"> kshs ${food.price}</h1>
               </div>
             
             </a>
@@ -33,7 +33,7 @@ const renderedselected = (item) => {
           <div class="product-info">
             <h1 class="product-name">${item.name}</h1>
             <p class="product-desc">${item.description}</p>
-            <h3 class="product-price">${item.price}</h3>
+            <h3 class="product-price"> Kshs ${item.price}</h3>
             <div class="quantity">
               <button class="minunBtn">
                 <!-- https://feathericons.dev/?search=minus&iconset=feather -->

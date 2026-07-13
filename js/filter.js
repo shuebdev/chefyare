@@ -72,12 +72,14 @@ const filteredVanillaCakes = () => {
 }
 
 
+
 const findingRelated = (selectedProduct) => {
     const relatedContainer = document.getElementById("relatedContainer");
     const related = foods.filter(food => {
         return (
-            food.category === selectedProduct.category &&
-            food.id !== selectedProduct.id
+            food.category === selectedProduct.category && 
+            food.type === selectedProduct.type 
+            && food.id !== selectedProduct.id
         );
     });
 

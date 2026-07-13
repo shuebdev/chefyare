@@ -651,11 +651,13 @@ footer li a:hover {
   gap: 0.2rem;
   flex-direction: column;
 }
-
-/* ? why choose styles */
+.myWork-item-price {
+  color: var(--blue-2);
+}
+/*  why choose styles */
 .why-choose-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
   gap: 1rem;
 }
 
@@ -733,6 +735,10 @@ footer li a:hover {
   #lunch {
     padding: 30px 0;
   }
+
+   .render-title{
+    margin-bottom: 2rem;
+   }
 }
 /* end of desktop design */
 
