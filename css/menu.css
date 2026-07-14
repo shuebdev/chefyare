@@ -1,0 +1,36 @@
+header {
+    padding-top: 2rem;
+    position: sticky;
+}
+
+.search {
+    position: relative;
+    max-width: 500px;
+}
+
+.search svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 4rem;
+    width: 20px;
+    height: 20px;
+    color: var(--blue-2);
+}
+
+.search input {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    border-radius: 1.2rem;
+    border: 1px solid var(--blue-2) ;
+}
+
+.search input::placeholder {
+    font-size: 1.4rem;
+    
+}
+
+.search input:focus {
+    box-shadow: 0 0 8px rgba(34,197,94,.2);
+    border: 1px solid var(--blue-2);
+}
