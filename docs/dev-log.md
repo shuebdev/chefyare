@@ -91,8 +91,41 @@ so i paused on javascript and decided to learn call back and promises to underst
   ### task completed 
 
   added 10 product data array and its details on product.js
+  finished adding all vanilla ceremonies data
+  added about.html for a quick over view
+
+  ### bugs
+
+  undefined functions on index.html
+
+   #### reason
+       calling function before it is created
    
 
+   #### solution 
+   arranged the way files are loaded in the browser
+
+
+   ## product update
+
+  ### files added
+   - about.html
+   - 404.html
+   - about.css
+   - 404.css
+
+## tuesday 15/7/2026
+
+### bugs
+no bugs for today
+
+### task
+
+made the menu nav and footer
+
+made the search filter UI
+
+fixed broken links
 
 
   

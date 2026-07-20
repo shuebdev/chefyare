@@ -23,7 +23,7 @@ const renderedItems = (items, container) => {
   .join("");
 };
 
-
+// rendering selected products
 const renderedselected = (item) => {
   const container = document.getElementById("selectedProduct");
   container.innerHTML = `

@@ -593,24 +593,6 @@ footer li a:hover {
   }
 }
 
-.buttons {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  justify-content: center;
-}
-.filter-btn {
-  padding: 0.4rem 0.8rem;
-  border-radius: 0.8rem;
-  border: 1px solid var(--blue-2);
-  background-color: var(--white-1);
-  text-transform: capitalize;
-}
-.filter-btn:hover {
-  background-color: var(--blue-2);
-  color: var(--white-1);
-}
-
 @media only screen and (max-width: 676px) {
   .myWork-item-grid {
     display: flex;

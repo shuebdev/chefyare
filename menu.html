@@ -172,25 +172,71 @@
       </div>
     </section>
     <!-- end of nav -->
+    <!-- search filtering section -->
     <header>
       <div class="search">
         <div class="container">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          class="bi bi-search"
-          viewBox="0 0 16 16"
-        >
-          <path
-            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
-          />
-        </svg>
-        <input type="text" placeholder="search for cakes, desserts or meals" />
+          <div class="search-wrapper">
+            <div class="searchInput">
+              <button class="search-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-search"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                  />
+                </svg>
+              </button>
+
+              <input
+                type="text"
+                id="userInput"
+                placeholder="search for cakes, desserts or meals"
+              />
+            </div>
+            <!-- filter btns -->
+            <div class="buttons">
+              <button class="filter-btn" id="all">all</button>
+              <button id="chocolateCakes" class="filter-btn">chocolate</button>
+              <button class="filter-btn" id="vanillaCakes">vanilla</button>
+              <button class="filter-btn" id="strawberry">strawberry</button>
+              <button class="filter-btn" id="strawberry">strawberry</button>
+              <button class="filter-btn" id="strawberry">strawberry</button>
+            </div>
+            <!-- end of filter btns -->
+          </div>
         </div>
       </div>
     </header>
+    <!-- end of search filtering section section -->
+     <main>
+    <!-- vanilla cakes -->
+    <section id="vanillaCakes">
+      <div class="container">
+        <h1 class="myWork-subtitle" data-aos="fade-up">our menu</h1>
+
+        <!-- meals -->
+        <div class="myWork-wrapper" data-aos="fade-up">
+          <h2 class="section-title">meals</h2>
+          <div class="myWork-item-grid" id="lunchContainer"></div>
+        </div>
+
+        <!-- vanilla cakes -->
+
+        <div class="myWork-wrapper" data-aos="fade-up">
+          <h2 class="section-title">vanilla cakes</h2>
+          <div class="myWork-item-grid" id="vanillaCakeContainer"></div>
+        </div>
+      </div>
+    </section>
+    <!-- end of vanilla cakes -->
+     </main>
+
     <!-- footer -->
     <footer>
       <section>
@@ -306,8 +352,14 @@
     </a>
     <!-- end of footer -->
   </body>
+  <!-- <script>
+
+    window.location.replace("404.html?page=menu")
+  </script> -->
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="js/product.js"></script>
+  <script src="./js/render.js"></script>
   <script src="js/filter.js"></script>
-  <script src="js/index.js"></script>
+  <!-- <script src="js/index.js"></script> -->
   <script src="js/menu.js"></script>
 </html>

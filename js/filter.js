@@ -68,7 +68,7 @@ const filterAndRenderLogic = (category, type, containerId) => {
 
 const filteredVanillaCakes = () => {
 
-    filterAndRenderLogic (cakesCategory, vanillaType, "vanillaCakeContainer");
+    filterAndRenderLogic (CATEGORY.CAKE, TYPE.VANILLA, "vanillaCakeContainer");
 }
 
 
