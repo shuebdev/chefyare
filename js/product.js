@@ -333,7 +333,7 @@ const foods = [
   },
 
   // ? vanilla engagement cake
-   {
+  {
     id: 13,
     image: "images/vanillaengagementcake.webp",
     name: "engagement vanilla cake",
@@ -550,5 +550,40 @@ const foods = [
   },
 ];
 
+
 findingId();
+addToCartFunc();
+initAddBtn();
+minusBtnInit();
+
+
+
+let selectedQuantity = 1;
+
+const total = document.getElementById("quant");
+const addProductBtn = document.getElementById("add");
+const minusProductBtn = document.getElementById("minus");
+
+console.log(total, addProductBtn, minusProductBtn);
+
+// Display initial value
+total.textContent = selectedQuantity;
+
+// Increase
+addProductBtn.addEventListener("click", () => {
+  selectedQuantity++;
+  total.textContent = selectedQuantity;
+  updateCart();
+});
+
+// Decrease
+minusProductBtn.addEventListener("click", () => {
+  if (selectedQuantity > 1) {
+    selectedQuantity--;
+    total.textContent = selectedQuantity;
+    updateCart();
+  }
+});
+
+ cartRenderValid();
 

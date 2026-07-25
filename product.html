@@ -181,7 +181,7 @@
       </div>
     </section>
     <!-- end of nav -->
-     <!-- selected product  -->
+    <!-- selected product  -->
     <section id="product">
       <div class="container">
         <div class="product-wrapper" id="selectedProduct">
@@ -190,7 +190,7 @@
       </div>
     </section>
     <!-- end of selected product -->
-     <!-- related product -->
+    <!-- related product -->
     <section id="renderedItems">
       <div class="container">
         <div class="myWork-wrapper">
@@ -200,8 +200,9 @@
       </div>
     </section>
     <!-- end of related product -->
-     <!-- cart -->
+    <!-- cart -->
     <section id="cart">
+      <div class="bgOverlay"></div>
       <div class="cart-modal" id="cartModal">
         <div id="closeBtn">
           <svg
@@ -223,16 +224,16 @@
         <div class="container" id="cartSystem"></div>
         <div class="check-wrapper" id="check-wrapper">
           <button class="checkoutBtn" id="checkoutBtn">
-            checkout <span id="subTotal">(ksh 23,000)</span>
+            checkout <span id="totalPrice"></span>
           </button>
           <button class="cont-shopping" id="contShopping">
-            continue shopping
+            <a href="./menu.html">continue shopping</a>
           </button>
         </div>
       </div>
     </section>
     <!-- end of cart -->
-     <!-- footer -->
+    <!-- footer -->
     <footer id="footer">
       <section>
         <div class="container">
@@ -294,7 +295,7 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./js/render.js"></script>
     <script src="./js/filter.js"></script>
-    <script src="./js/product.js"></script>
     <script src="./js/cart.js"></script>
+    <script src="./js/product.js"></script>
   </body>
 </html>

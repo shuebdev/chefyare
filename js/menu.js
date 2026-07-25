@@ -21,8 +21,13 @@ AOS.init({
 
 
 filteredLunch();
-filteredHomePageCakes();
 filteredVanillaCakes();
 
-console.log(filteredVanillaCakes())
+// search button init
+
+const searchbtns = document.querySelector(".search-btn");
+
+searchbtns.addEventListener('click', () => {
+  searchFilter();
+})
 

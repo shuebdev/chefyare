@@ -35,7 +35,7 @@ const renderedselected = (item) => {
             <p class="product-desc">${item.description}</p>
             <h3 class="product-price"> Kshs ${item.price}</h3>
             <div class="quantity">
-              <button class="minunBtn">
+              <button id="minus">
                 <!-- https://feathericons.dev/?search=minus&iconset=feather -->
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -52,8 +52,8 @@ const renderedselected = (item) => {
                   <line x1="5" x2="19" y1="12" y2="12" />
                 </svg>
               </button>
-              <span id="total">1</span>
-              <button class="addBtn">
+              <span id="quant" class="quant"></span>
+              <button id="add">
                 <!-- https://feathericons.dev/?search=plus&iconset=feather -->
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -120,3 +120,4 @@ const renderedselected = (item) => {
 
   
 };
+

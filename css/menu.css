@@ -64,17 +64,20 @@ header {
 .searchInput {
    position: relative;
    width: 100%;
+   align-items: center;
 }
 
 @media only screen and (min-width: 768px)
 {
   header {
-    
+    padding-top: 80px;
+    background-color: transparent;
+    box-shadow: none;
   }
 }
 
 main {
-  padding-top: 100px;
+  padding-top: 160px;
 }
 
 .search {
@@ -108,3 +111,6 @@ main {
   background-color: var(--white-1);
   text-transform: capitalize;
 }
+
+/* menu grid */
+

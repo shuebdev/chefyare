@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/cart.css" />
+     <link rel="stylesheet" href="./css/index.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -143,7 +143,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="primary-btn btn navbtn">
+                  <a href="#" class="primary-btn btn navbtn" id="cartBtn">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -211,7 +211,7 @@
           <h2 class="section-title">cakes and desserts</h2>
           <div class="myWork-item-grid" id="homePageContainer"></div>
           <div class="our-menu-link">
-            <a href="./menu.html" class="btn primary-btn">view our menu</a>
+            <a href="./menu.html" class="btn primary-btn key">view our menu</a>
           </div>
         </div>
       </div>
@@ -476,6 +476,39 @@
       </div>
     </section>
     <!-- end of contacts -->
+    <!-- cart -->
+    <section id="cart">
+      <div class="cart-modal" id="cartModal">
+         <div class="bgOverlay"></div>
+        <div id="closeBtn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </div>
+        <h1 class="cart-title">your cart</h1>
+        <div class="container" id="cartSystem"></div>
+        <div class="check-wrapper" id="check-wrapper">
+          <button class="checkoutBtn" id="checkoutBtn">
+            checkout <span id="total"></span>
+          </button>
+          <button class="cont-shopping" id="contShopping">
+            <a href="./menu.html">continue shopping</a>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- end of cart -->
     <!-- footer -->
     <footer>
       <section>
@@ -593,7 +626,7 @@
     <script src="./js/product.js"></script>
     <script src="./js/render.js"></script>
     <script src="./js/filter.js"></script>
+     <script src="./js/cart.js"></script>
     <script src="./js/index.js"></script>
-    <script src="./js/cart.js"></script>
   </body>
 </html>

@@ -2,21 +2,24 @@
 const cartModel = document.querySelector(".cart-modal");
 const closeBtn = document.getElementById("closeBtn");
 const cartBtn = document.getElementById("cartBtn");
+const bgOverlay = document.querySelector(".bgOverlay");
 
-// open nav
+// open cart modal
 
 const openCart = () => {
   cartModel.classList.add("modalActive");
-  document.body.style = `visibility: visible; height: 100vh; width:100vw; overflow: hidden; `;
+  bgOverlay.classList.add("activeBg");
+  document.body.classList.add("no-scroll");
 };
 
-// close nav
+// close cart modal
 
 const closeCart = () => {
   cartModel.classList.remove("modalActive");
-  document.body.style = `visibility: visible; height: initial; width:100%; overflow-x: hidden; `;
+  bgOverlay.classList.remove("activeBg");
+  document.body.classList.remove("no-scroll");
 };
-
+document.querySelectorAll(".bgOverlay").length;
 // init
 closeBtn.addEventListener("click", closeCart);
 cartBtn.addEventListener("click", openCart);
@@ -66,6 +69,7 @@ const emptyCartHtml = `
                 Looks like you haven't added anything yet.
               </p>
             </div>
+             
           </div>
         </div>
             `;
@@ -88,6 +92,7 @@ const renderItems = (items) => {
               class="cart-img"
             />
           </div>
+          
           <div class="cart-item-info">
             <h1 class="cart-item-name">
               product name:
@@ -99,7 +104,6 @@ const renderItems = (items) => {
             <h1 class="cart-item-quantity">
               sub total:<span class="product-name-value">${subTotal}</span>
             </h1>
-            <div class="bgOverlay"></div>
             <div class="btn-wrapper">
               <div class="quantity">
                 <button class="minusBtn" data-id = "${item.id}">
@@ -119,7 +123,7 @@ const renderItems = (items) => {
                     <line x1="5" x2="19" y1="12" y2="12" />
                   </svg>
                 </button>
-                <span id="total">1</span>
+                <span class="quant">${item.quantity}</span>
                 <button class="addBtn" data-id = "${item.id}">
                   <!-- https://feathericons.dev/?search=plus&iconset=feather -->
                   <svg
@@ -140,7 +144,7 @@ const renderItems = (items) => {
                 </button>
               </div>
               <div class="remove">
-                <button class="deleteBtn">
+                <button class="deleteBtn" data-id = "${item.id}">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -164,6 +168,8 @@ const renderItems = (items) => {
           </div>
         </div>
         `;
+
+        updateTotal();
   });
 
   return html;
@@ -177,6 +183,8 @@ const renderCart = () => {
     `;
   initAddBtn();
   minusBtnInit();
+  deleteInint();
+
 };
 
 // add button logic
@@ -209,7 +217,9 @@ const initAddBtn = () => {
 // updating cart
 const updateCart = () => {
   saveCart();
-  renderCart();
+  // cart logic render
+  cartRenderValid();
+  updateTotal();
 };
 
 // minus button logic
@@ -228,6 +238,13 @@ const MinusBtnLogic = (id) => {
   }
 };
 
+cartRenderValid = () => {
+  if (cart.length === 0) {
+    emptyRenderedCart();
+  } else {
+    renderCart();
+  }
+};
 // minus btn init
 
 const minusBtnInit = () => {
@@ -236,31 +253,44 @@ const minusBtnInit = () => {
   quantityMinusButtons.forEach((button) => {
     button.addEventListener("click", () => {
       const id = Number(button.dataset.id);
-    
 
       MinusBtnLogic(id);
     });
   });
 };
 
-// cart logic render
+// remove function
 
-if (cart.length === 0) {
-  emptyRenderedCart();
-} else {
-  renderCart();
-}
+const removeItem = (id) => {
+  const index = cart.findIndex((item) => {
+    return item.id === id;
+  });
+
+  if (index !== -1) {
+    cart.splice(index, 1);
+  }
+
+  updateCart();
+};
+const deleteInint = () => {
+  const deleteBtn = document.querySelectorAll(".deleteBtn");
+
+  deleteBtn.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const id = Number(btn.dataset.id);
+      removeItem(id);
+    });
+  });
+};
 
 // cart addToBtn logic
 
-const addToCartLogic = (id) => {
+const addToCartLogic = (id, quantity) => {
   // finding product
 
   const selectedProduct = foods.find((food) => {
     return food.id === id;
   });
-
-
 
   // finding duplicate items
   const checkItem = cart.find((item) => {
@@ -276,8 +306,8 @@ const addToCartLogic = (id) => {
       id: selectedProduct.id,
       name: selectedProduct.name,
       image: selectedProduct.image,
-      quantity: 1,
-      price: selectedProduct.price
+      quantity: quantity,
+      price: selectedProduct.price,
     });
   }
 
@@ -286,17 +316,29 @@ const addToCartLogic = (id) => {
 
 // add to cart buttons
 const addToCartFunc = () => {
-const addToCartBtns = document.querySelectorAll(".add-to-cart");
+  const addToCartBtns = document.querySelectorAll(".add-to-cart");
 
-addToCartBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    console.log("Add to cart clicked");
-    const id = Number(btn.dataset.id);
-    addToCartLogic(id);
+  addToCartBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const id = Number(btn.dataset.id);
+
+      addToCartLogic(id, selectedQuantity);
+      // Reset after adding
+      selectedQuantity = 1;
+      total.textContent = selectedQuantity;
+    });
   });
-});
-}
-window.initButton = function (){
-  addToCartFunc();
-}
+};
 
+
+const totalPrice = document.getElementById("totalPrice")
+
+const updateTotal = () => {
+  const total = cart.reduce((sum, item) => {
+    return sum + item.price * item.quantity;
+  }, 0);
+
+
+  totalPrice.textContent = `(${total})`;
+
+};
