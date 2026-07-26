@@ -550,13 +550,12 @@ const foods = [
   },
 ];
 
-
 findingId();
 addToCartFunc();
 initAddBtn();
 minusBtnInit();
-
-
+cartRenderValid();
+continuefunc();
 
 let selectedQuantity = 1;
 
@@ -584,6 +583,3 @@ minusProductBtn.addEventListener("click", () => {
     updateCart();
   }
 });
-
- cartRenderValid();
-

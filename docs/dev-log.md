@@ -127,6 +127,18 @@ made the search filter UI
 
 fixed broken links
 
+## saturday 25/7/2026
+
+for the the past 10 days something occured i could'nt continue the project
+
+### task
+
+1. i have successfully built the whole cart system 
+
+### bugs
+
+several bugs i cant explain but somehow debugged it
+
 
   
 
