@@ -556,6 +556,7 @@ initAddBtn();
 minusBtnInit();
 cartRenderValid();
 continuefunc();
+cartLenFunc();
 
 let selectedQuantity = 1;
 

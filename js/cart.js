@@ -9,7 +9,7 @@ const bgOverlay = document.querySelector(".bgOverlay");
 const openCart = () => {
   cartModel.classList.add("modalActive");
   bgOverlay.classList.add("activeBg");
-  document.body.classList.add("no-scroll");
+ document.body.style = `visibility: visible; height: 100vh; width:100vw; overflow: hidden; `;
 };
 
 // close cart modal
@@ -17,7 +17,7 @@ const openCart = () => {
 const closeCart = () => {
   cartModel.classList.remove("modalActive");
   bgOverlay.classList.remove("activeBg");
-  document.body.classList.remove("no-scroll");
+   document.body.style = `visibility: visible; height: initial; width:100%; overflow-x: hidden; `
 };
 document.querySelectorAll(".bgOverlay").length;
 // init
@@ -351,10 +351,10 @@ const continuefunc = () => {
 // cart lenght
 
 const cartLen = document.getElementById("cartLen");
-cartLen = 0;
+let cartCount = 0;
 const cartLenFunc = () => {
   
-  const cartCount = cart.length;
+  cartCount = cart.length;
 
   cartLen.textContent = cartCount;
 };
