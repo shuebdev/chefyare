@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/global.css" />
-    <link rel="stylesheet" href="./css/404.css" />
+     <link rel="stylesheet" href="./css/404.css" />
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="css/product.css">
+   
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,7 +22,7 @@
   </head>
   <body>
     <!-- nav -->
-     <section class="nav">
+      <section class="nav">
       <div class="container">
         <div class="nav-wrapper">
           <a href="./index.html" class="logo">
@@ -43,7 +46,6 @@
                 <line x1="21" y1="14" x2="3" y2="14" />
                 <line x1="21" y1="18" x2="3" y2="18" />
               </svg>
-              <div class="bgOverlay"></div>
             </div>
             <ul class="list">
               <div class="close-icon">
@@ -64,7 +66,7 @@
               </div>
               <div class="list-wrapper">
                 <li>
-                  <a href="./index.html" class="links">
+                  <a href="./index.html" class="links activeIcon">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="16"
@@ -123,7 +125,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#lunch" class="links contact">
+                  <a href="./contact.html" class="links contact">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -144,7 +146,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="primary-btn btn navbtn">
+                  <a href="#" class="primary-btn btn navbtn" id="cartBtn">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -163,6 +165,7 @@
                       />
                     </svg>
                     <span>cart</span>
+                    <div class="cartLen" id="cartLen"></div>
                   </a>
                 </li>
               </div>
@@ -191,6 +194,7 @@
           <h2 class="error-sub-title">coming soon!</h2>
           <p class="error-desc"></p>
         </div>
+        <div class="error-btn">
         <a href="./index.html" class="home-link btn primary-btn">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -206,8 +210,214 @@
           </svg>
           Home</a
         >
+        </div>
       </div>
     </section>
+
+     <!-- ? cart system -->
+    <section id="cart">
+      <div class="bgOverlay"></div>
+      <div class="cart-modal" id="cartModal">
+        <div id="closeBtn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </div>
+        <h1 class="cart-title">your cart</h1>
+        <div class="container" id="cartSystem"></div>
+        <div class="check-wrapper" id="check-wrapper">
+          <button class="checkoutBtn" id="checkoutBtn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-bag-check"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10.854 8.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708 0"
+              />
+              <path
+                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"
+              />
+            </svg>
+            checkout <span id="totalPrice"></span>
+          </button>
+          <button class="cont-shopping" id="contShopping">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-bag-plus"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5"
+              />
+              <path
+                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"
+              />
+            </svg>
+
+            <span>continue shopping</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- ? end of cart system -->
+    <!-- footer -->
+    <footer>
+      <section>
+        <div class="container">
+          <div class="footer-wrapper">
+            <div class="footer-col1">
+              <h3 class="footer-title">menu</h3>
+              <ul>
+                <li><a href="./index.html">home</a></li>
+                <li><a href="./menu.html">menu</a></li>
+                <li><a href="./contact.html">contact</a></li>
+                <li><a href="./about.html">about me</a></li>
+              </ul>
+            </div>
+            <div class="footer-col1">
+              <h3 class="footer-title">contact</h3>
+              <ul>
+                <li>
+                  <a href="./about.html" class="social-title"
+                    >whatsApp number:
+                    <span class="social-span">+254 702388122</span></a
+                  >
+                </li>
+                <li>
+                  <a href="mailto:ssuhebbare@gmail.com" class="social-title"
+                    >gmail:
+                    <span class="social-span">ssuhebbare@gmail.com</span></a
+                  >
+                </li>
+
+                <li>
+                  <a href="mailto:ssuhebbare@gmail.com" class="social-title"
+                    >phone number:
+                    <span class="social-span">0726 538973</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="footer-col1">
+              <h3 class="footer-title">address</h3>
+              <ul>
+                <li>
+                  <a
+                    href="https://www.google.com/maps?q=Eastleigh+Section+3+Nairobi"
+                    target="_blank"
+                    >eastleigh, section 3</a
+                  >
+                </li>
+                <li>
+                  <a href="https://maps.google.com/?q=-1.2920659,36.8219462"
+                    >Nairobi, Kenya</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="footer-col1">
+              <h3 class="footer-title">socials</h3>
+              <ul>
+                <li><a href="./">instagram</a></li>
+                <li><a href="https://www.tiktok.com/@_.chef_ali">tiktok</a></li>
+                <li><a href="https://wa.me/0702388122">whatsApp</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <div class="copy-right">
+      <p class="copyright-desc">&copy; 2026 Chef Yare. All rights reserved.</p>
+    </div>
+    <!-- whatsAppp float -->
+      <!-- end of footer -->
+    <a href="#" class="whatsApp-float openModal">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        x="0px"
+        y="0px"
+        width="100"
+        height="100"
+        viewBox="0,0,256,256"
+      >
+        <g
+          fill="none"
+          fill-rule="none"
+          stroke="none"
+          stroke-width="1"
+          stroke-linecap="butt"
+          stroke-linejoin="miter"
+          stroke-miterlimit="10"
+          stroke-dasharray=""
+          stroke-dashoffset="0"
+          font-family="none"
+          font-weight="none"
+          font-size="none"
+          text-anchor="none"
+          style="mix-blend-mode: normal"
+        >
+          <g transform="scale(5.33333,5.33333)">
+            <path
+              d="M4.868,43.303l2.694,-9.835c-1.662,-2.878 -2.536,-6.144 -2.535,-9.489c0.005,-10.465 8.521,-18.979 18.987,-18.979c5.079,0.002 9.845,1.979 13.43,5.566c3.584,3.588 5.558,8.356 5.556,13.428c-0.004,10.465 -8.522,18.98 -18.986,18.98c-0.001,0 0,0 0,0h-0.008c-3.177,-0.001 -6.3,-0.798 -9.073,-2.311z"
+              fill="#ffffff"
+              fill-rule="nonzero"
+            ></path>
+            <path
+              d="M4.868,43.803c-0.132,0 -0.26,-0.052 -0.355,-0.148c-0.125,-0.127 -0.174,-0.312 -0.127,-0.483l2.639,-9.636c-1.636,-2.906 -2.499,-6.206 -2.497,-9.556c0.004,-10.742 8.745,-19.48 19.486,-19.48c5.21,0.002 10.105,2.031 13.784,5.713c3.679,3.683 5.704,8.577 5.702,13.781c-0.004,10.741 -8.746,19.48 -19.486,19.48c-3.189,-0.001 -6.344,-0.788 -9.144,-2.277l-9.875,2.589c-0.042,0.012 -0.084,0.017 -0.127,0.017z"
+              fill="#ffffff"
+              fill-rule="nonzero"
+            ></path>
+            <path
+              d="M24.014,5c5.079,0.002 9.845,1.979 13.43,5.566c3.584,3.588 5.558,8.356 5.556,13.428c-0.004,10.465 -8.522,18.98 -18.986,18.98h-0.008c-3.177,-0.001 -6.3,-0.798 -9.073,-2.311l-10.065,2.64l2.694,-9.835c-1.662,-2.878 -2.536,-6.144 -2.535,-9.489c0.005,-10.465 8.521,-18.979 18.987,-18.979M24.014,42.974v0v0M24.014,42.974v0v0M24.014,4v0c-11.016,0 -19.982,8.962 -19.987,19.979c-0.001,3.367 0.849,6.685 2.461,9.622l-2.585,9.439c-0.094,0.345 0.002,0.713 0.254,0.967c0.19,0.192 0.447,0.297 0.711,0.297c0.085,0 0.17,-0.011 0.254,-0.033l9.687,-2.54c2.828,1.468 5.998,2.243 9.197,2.244c11.024,0 19.99,-8.963 19.995,-19.98c0.002,-5.339 -2.075,-10.359 -5.848,-14.135c-3.775,-3.777 -8.796,-5.858 -14.139,-5.86z"
+              fill="#22c55e"
+              fill-rule="nonzero"
+            ></path>
+            <path
+              d="M35.176,12.832c-2.98,-2.982 -6.941,-4.625 -11.157,-4.626c-8.704,0 -15.783,7.076 -15.787,15.774c-0.001,2.981 0.833,5.883 2.413,8.396l0.376,0.597l-1.595,5.821l5.973,-1.566l0.577,0.342c2.422,1.438 5.2,2.198 8.032,2.199h0.006c8.698,0 15.777,-7.077 15.78,-15.776c0.001,-4.215 -1.638,-8.179 -4.618,-11.161z"
+              fill="#22c55e"
+              fill-rule="nonzero"
+            ></path>
+            <path
+              d="M19.268,16.045c-0.355,-0.79 -0.729,-0.806 -1.068,-0.82c-0.277,-0.012 -0.593,-0.011 -0.909,-0.011c-0.316,0 -0.83,0.119 -1.265,0.594c-0.435,0.475 -1.661,1.622 -1.661,3.956c0,2.334 1.7,4.59 1.937,4.906c0.237,0.316 3.282,5.259 8.104,7.161c4.007,1.58 4.823,1.266 5.693,1.187c0.87,-0.079 2.807,-1.147 3.202,-2.255c0.395,-1.108 0.395,-2.057 0.277,-2.255c-0.119,-0.198 -0.435,-0.316 -0.909,-0.554c-0.474,-0.238 -2.807,-1.385 -3.242,-1.543c-0.435,-0.158 -0.751,-0.237 -1.068,0.238c-0.316,0.474 -1.225,1.543 -1.502,1.859c-0.277,0.317 -0.554,0.357 -1.028,0.119c-0.474,-0.238 -2.002,-0.738 -3.815,-2.354c-1.41,-1.257 -2.362,-2.81 -2.639,-3.285c-0.277,-0.474 -0.03,-0.731 0.208,-0.968c0.213,-0.213 0.474,-0.554 0.712,-0.831c0.237,-0.277 0.316,-0.475 0.474,-0.791c0.158,-0.317 0.079,-0.594 -0.04,-0.831c-0.117,-0.238 -1.039,-2.584 -1.461,-3.522z"
+              fill="#ffffff"
+              fill-rule="evenodd"
+            ></path>
+          </g>
+        </g>
+      </svg>
+    </a>
+
+     <!-- end of whatsApp float -->
+    <!-- end of footer -->
+
+    <!-- javascript files -->
+     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./js/product.js"></script>
+    <script src="./js/render.js"></script>
+    <script src="./js/filter.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="js/init.js"></script>
     <script>
       const query = new URLSearchParams(window.location.search);
 

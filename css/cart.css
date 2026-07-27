@@ -302,4 +302,9 @@
   justify-content: center;
 }
 
-
+@media only screen and (min-width: 668px)
+{
+  #cartBtn {
+    position: relative;
+  }
+}

@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/cart.css" />
-     <link rel="stylesheet" href="./css/index.css" />
-     <link rel="stylesheet" href="./css/product.css">
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="css/product.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,7 +19,9 @@
     <title>Home</title>
   </head>
   <body>
-    <section class="nav">
+    <!-- nav -->
+   
+     <section class="nav">
       <div class="container">
         <div class="nav-wrapper">
           <a href="./index.html" class="logo">
@@ -63,7 +65,7 @@
               </div>
               <div class="list-wrapper">
                 <li>
-                  <a href="./index.html" class="links activeIcon">
+                  <a href="./index.html" class="links ">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="16"
@@ -122,7 +124,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="./contact.html" class="links contact">
+                  <a href="./contact.html" class="links activeIcon">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -171,313 +173,7 @@
         </div>
       </div>
     </section>
-    <!-- hero section -->
-    <section id="hero">
-      <div class="container">
-        <div class="hero-wrapper">
-          <div class="my-title-wrapper">
-            <div class="hero-info">
-              <h1 class="hero-title" data-aos="fade-right">
-                “From Our Kitchen to Your Plate”
-              </h1>
-              <h4 class="hero-sub-title" data-aos="fade-left">-chef yare</h4>
-              <p class="hero-desc" data-aos="fade-left">
-                “We prepare fresh homemade meals daily, including food,
-                desserts, and cakes, all made with care and authentic flavor.
-                Delivery is available, with payment on delivery.”
-              </p>
-              <a
-                href="#"
-                class="primary-btn btn key openModal"
-                data-aos="fade-left"
-                >explore our menu</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- end of hero section -->
-    <!-- product rendering section -->
-    <section id="lunch">
-      <div class="container">
-        <h1 class="myWork-subtitle" data-aos="fade-up">our menu</h1>
-
-        <div class="myWork-wrapper" data-aos="fade-up">
-          <h2 class="section-title">meals</h2>
-          <div class="myWork-item-grid" id="lunchContainer"></div>
-        </div>
-
-        <div class="myWork-wrapper" data-aos="fade-up">
-          <h2 class="section-title">cakes and desserts</h2>
-          <div class="myWork-item-grid" id="homePageContainer"></div>
-          <div class="our-menu-link">
-            <a href="./menu.html" class="btn primary-btn key">view our menu</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- end of product rendering -->
-    <!-- why choose section -->
-    <section id="whyChooseUs" data-aos="fade-up">
-      <div class="container">
-        <div class="why-choose-title-wrapper">
-          <h1 class="why-choose-title">why choose chef yare</h1>
-          <p class="why-choose-desc">
-            We're committed to serving fresh, delicious meals with quality
-            ingredients, quick service, and prices you'll love.
-          </p>
-        </div>
-        <div class="why-choose-wrapper">
-          <div class="why-choose-item">
-            <div class="why-choose-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-egg-fried"
-                viewBox="0 0 16 16"
-              >
-                <path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-                <path
-                  d="M13.997 5.17a5 5 0 0 0-8.101-4.09A5 5 0 0 0 1.28 9.342a5 5 0 0 0 8.336 5.109 3.5 3.5 0 0 0 5.201-4.065 3.001 3.001 0 0 0-.822-5.216zm-1-.034a1 1 0 0 0 .668.977 2.001 2.001 0 0 1 .547 3.478 1 1 0 0 0-.341 1.113 2.5 2.5 0 0 1-3.715 2.905 1 1 0 0 0-1.262.152 4 4 0 0 1-6.67-4.087 1 1 0 0 0-.2-1 4 4 0 0 1 3.693-6.61 1 1 0 0 0 .8-.2 4 4 0 0 1 6.48 3.273z"
-                />
-              </svg>
-            </div>
-            <div class="why-choose-info">
-              <h2 class="why-choose-info-title">fresh food</h2>
-              <p class="why-choose-info-desc">
-                Every meal is prepared using fresh, carefully selected
-                ingredients for great taste and quality.
-              </p>
-            </div>
-          </div>
-
-          <div class="why-choose-item">
-            <div class="why-choose-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-truck"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"
-                />
-              </svg>
-            </div>
-            <div class="why-choose-info">
-              <h2 class="why-choose-info-title">Fast Delivery</h2>
-              <p class="why-choose-info-desc">
-                Your order is prepared quickly and delivered while it's still
-                fresh and ready to enjoy.
-              </p>
-            </div>
-          </div>
-
-          <div class="why-choose-item">
-            <div class="why-choose-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-house"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"
-                />
-              </svg>
-            </div>
-            <div class="why-choose-info">
-              <h2 class="why-choose-info-title">Homemade Recipes</h2>
-              <p class="why-choose-info-desc">
-                Our meals are made with care using recipes that bring comfort,
-                flavor, and a homemade touch.
-              </p>
-            </div>
-          </div>
-
-          <div class="why-choose-item">
-            <div class="why-choose-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-cash-coin"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8m5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0"
-                />
-                <path
-                  d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195z"
-                />
-                <path
-                  d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083q.088-.517.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1z"
-                />
-                <path
-                  d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 6 6 0 0 1 3.13-1.567"
-                />
-              </svg>
-            </div>
-            <div class="why-choose-info">
-              <h2 class="why-choose-info-title">Affordable Prices</h2>
-              <p class="why-choose-info-desc">
-                Enjoy delicious meals at fair prices without compromising on
-                quality or portion size.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- end of why choose section -->
-    <!-- about -->
-
-    <section id="about" data-aos="fade-up">
-      <div class="container">
-        <h1 class="about-title">About Us</h1>
-
-        <div class="about-wrapper">
-          <div class="about-right-side">
-            <h1 class="about-sub-title">Who We Are</h1>
-
-            <p class="about-desc">
-              At Chef Yare, we believe that great food brings people together.
-              Every meal is prepared with fresh ingredients, authentic recipes,
-              and a passion for quality. From our daily homemade lunches to our
-              delicious cakes and desserts, we are committed to serving food
-              that is full of flavor and made with care. Our mission is to
-              provide every customer with a memorable dining experience through
-              quality meals, friendly service, and reliable delivery.
-            </p>
-
-            <a href="menu.html" class="primary-btn">Explore Our Menu</a>
-          </div>
-
-          <div class="about-left-side">
-            <img
-              src="./images/chefcooking.webp"
-              alt="Chef preparing a meal"
-              class="about-img"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- end of about -->
-    <!-- contacts -->
-    <section id="contacts" data-aos="fade-up">
-      <div class="container">
-        <h1 class="contact-title">contact</h1>
-        <div class="contact-wrapper">
-          <div class="contact-item">
-            <a
-              href="https://www.google.com/maps?q=Eastleigh+Section+3+Nairobi"
-              target="_blank"
-            >
-              <div class="contact-img">
-                <!-- https://feathericons.dev/?search=map-pin&iconset=feather -->
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  height="24"
-                  class="main-grid-item-icon"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                >
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                  <circle cx="12" cy="10" r="3" />
-                </svg>
-              </div>
-
-              <h3 class="email">eastleigh, section 3</h3>
-            </a>
-          </div>
-          <div class="contact-item">
-            <a href="mailto:ssuhebbare@gmail.com">
-              <div class="contact-img">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path
-                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-                  />
-                  <polyline points="22,6 12,13 2,6" />
-                </svg>
-              </div>
-              <h3 class="email">email</h3>
-            </a>
-          </div>
-
-          <div class="contact-item">
-            <a
-              href="https://www.instagram.com/_.sultan_suheib._"
-              target="_blank"
-            >
-              <div class="contact-img">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                </svg>
-              </div>
-              <h3 class="email">instagram</h3>
-            </a>
-          </div>
-        </div>
-        <div class="desc-wrapper">
-          <p class="contact-desc">click the boxes to view</p>
-          <!-- https://feathericons.dev/?search=arrow-up&iconset=feather -->
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            width="24"
-            height="24"
-            class="main-grid-item-icon"
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="1"
-          >
-            <line x1="12" x2="12" y1="19" y2="5" />
-            <polyline points="5 12 12 5 19 12" />
-          </svg>
-        </div>
-      </div>
-    </section>
-    <!-- end of contacts -->
-    <!-- cart -->
+    <!-- ? cart system -->
     <section id="cart">
       <div class="bgOverlay"></div>
       <div class="cart-modal" id="cartModal">
@@ -542,7 +238,7 @@
         </div>
       </div>
     </section>
-    <!-- end of cart -->
+    <!-- ? end of cart system -->
     <!-- footer -->
     <footer>
       <section>
@@ -613,7 +309,8 @@
     <div class="copy-right">
       <p class="copyright-desc">&copy; 2026 Chef Yare. All rights reserved.</p>
     </div>
-    <!-- end of footer -->
+    <!-- whatsAppp float -->
+      <!-- end of footer -->
     <a href="#" class="whatsApp-float openModal">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -669,11 +366,20 @@
         </g>
       </svg>
     </a>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+     <!-- end of whatsApp float -->
+    <!-- end of footer -->
+    
+    <script>
+        window.location.replace("404.html?page=contact")
+    </script>
+
+    <!-- javascript files -->
+     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./js/product.js"></script>
     <script src="./js/render.js"></script>
     <script src="./js/filter.js"></script>
     <script src="./js/cart.js"></script>
-    <script src="./js/index.js"></script>
+    <script src="js/init.js"></script>
   </body>
 </html>

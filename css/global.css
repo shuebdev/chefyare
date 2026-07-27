@@ -71,3 +71,29 @@ p {
   line-height: 1.8rem;
   font-size: 1.8rem;
 }
+
+/* copy right */
+.copy-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: .6rem;
+}
+
+.copyright-desc {
+  font-size: 1.4rem;
+  text-transform: lowercase;
+}
+
+/* whatsApp float */
+
+.whatsApp-float {
+  left: 20px;
+  bottom: 60px;
+  position: fixed;
+  animation: pulse 2s infinite;
+}
+.whatsApp-float svg {
+  width: 60px;
+  height: 60px;
+}
