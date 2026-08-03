@@ -557,6 +557,8 @@ minusBtnInit();
 cartRenderValid();
 continuefunc();
 cartLenFunc();
+openCheckout();
+
 
 let selectedQuantity = 1;
 

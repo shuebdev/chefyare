@@ -121,3 +121,33 @@ const renderedselected = (item) => {
   
 };
 
+
+const cartSumCon = document.getElementById("cartContainer")
+const renderCartSummary = (items, container) => {
+  container.innerHTML = items.map((item) => {
+
+    const subTotal = item.price * item.quantity;
+    return `
+           
+              <div class="summary-wrapper">
+                <p class="item-name">
+                  ${item.name} X<span class="item-quantity">${item.quantity}</span>
+                </p>
+                <p class="item-total">ksh ${subTotal}</p>
+              </div>
+            
+    `;
+  }) .join("");
+
+  const itemName = items.quantity;
+
+  
+  
+
+  updateCart();
+
+};
+
+
+
+

@@ -139,6 +139,21 @@ for the the past 10 days something occured i could'nt continue the project
 
 several bugs i cant explain but somehow debugged it
 
+## monday 8/3/2026
+
+### task
+
+1. final checkout function and system conclusion
+2. polish all links
+
+### bug
+
+1. displaying cart array as text to send it to whatsapp
+   
+#### solution
+
+i used `.map()` since `.foreach()` cant generate strings
+
 
   
 
