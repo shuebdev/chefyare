@@ -78,6 +78,12 @@ header {
 
 main {
   padding-top: 160px;
+  display: none;
+}
+
+#searchSection {
+  padding-top: 160px;
+  display: none;
 }
 
 .search {
@@ -110,6 +116,32 @@ main {
   border: 1px solid var(--blue-2);
   background-color: var(--white-1);
   text-transform: capitalize;
+}
+
+.no-items {
+  padding-top: 160px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.no-items-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.no-items-svg svg {
+  width: 100px;
+  height: 100px;
+  line-height: 1rem;
+  color: var(--blue-2);
+}
+
+.no-items-desc {
+  font-size: 3rem;
+  color: var(--blue-2);
 }
 
 /* menu grid */

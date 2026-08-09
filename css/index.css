@@ -216,7 +216,7 @@ footer li a:hover {
 
 #hero {
   background:
-    linear-gradient(rgba(0, 0, 0, 0.455), rgba(0, 0, 0, 0.755)),
+    linear-gradient(rgba(0, 0, 0, 0.455), rgba(0, 0, 0, 0.555)),
     url("../images/hero.webp") no-repeat center / cover;
   height: 100vh;
   display: flex;

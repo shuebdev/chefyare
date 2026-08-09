@@ -30,7 +30,7 @@ const filteredHomePageCakes = () => {
   renderedItems(homePageCakes, homePageCakesContainer);
 };
 
-// filtered desserts
+// * filtered desserts
 
 const filtereddesserts = () => {
   const dessertContainer = document.getElementById("dessertContainer");
@@ -90,11 +90,35 @@ const searchFilter = () => {
   });
 
   renderedItems(searchResult, searchContainer);
+
+  if (searchResult.length === 0)
+  {
+    searchContainer.innerHTML = `
+      
+    `
+  }
+
+  return searchResult;
 };
 
 
-userInput.addEventListener("input", () => {
+
+const mainContainer = document.getElementById('menuProduct');
+
+const searchSection = document.getElementById('searchSection');
+
+ searchSection.style.display = "none";
+
+userInput.addEventListener("keyup", () => {
     searchFilter();
+
+    if (userInput.value.trim() !== "") {
+        mainContainer.style.display = "none";
+        searchSection.style.display = "flex"
+    } else {
+        mainContainer.style.display = "block";
+        searchSection.style.display = "none";
+    }
 });
 
 
