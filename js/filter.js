@@ -53,7 +53,7 @@ const findingId = () => {
 
 const filterAndRenderLogic = (category, type, containerId) => {
   const filteredcategory = foods.filter((food) => {
-    return food.category === category && food.type === type;
+    return food.category === category && (!type || food.type === type);
   });
 
   renderedItems(filteredcategory, document.getElementById(containerId));
@@ -84,44 +84,61 @@ const userInput = document.getElementById("userInput");
 const searchContainer = document.getElementById("searchContainer");
 
 const searchFilter = () => {
-    const inputValue = userInput.value;
+  const inputValue = userInput.value;
   const searchResult = foods.filter((food) => {
     return food.name.toLowerCase().includes(inputValue.toLowerCase());
   });
 
   renderedItems(searchResult, searchContainer);
 
-  if (searchResult.length === 0)
-  {
-    searchContainer.innerHTML = `
-      
-    `
-  }
-
   return searchResult;
 };
 
+const mainContainer = document.getElementById("menuProduct");
 
+const searchSection = document.getElementById("searchSection");
 
-const mainContainer = document.getElementById('menuProduct');
+const noItemSection = document.getElementById("noItemSection");
 
-const searchSection = document.getElementById('searchSection');
+noItemSection.style.display = "none";
 
- searchSection.style.display = "none";
+searchSection.style.display = "none";
+
+// no item logic
+
 
 userInput.addEventListener("keyup", () => {
-    searchFilter();
+  
+  let noItemResult = searchFilter();
 
-    if (userInput.value.trim() !== "") {
-        mainContainer.style.display = "none";
-        searchSection.style.display = "flex"
-    } else {
-        mainContainer.style.display = "block";
-        searchSection.style.display = "none";
-    }
+  if (userInput.value.trim() !== "") {
+    mainContainer.style.display = "none";
+    searchSection.style.display = "flex";
+  } else {
+    mainContainer.style.display = "block";
+    searchSection.style.display = "none";
+  }
+
+  if (noItemResult.length === 0) {
+    renderNoItem();
+    searchSection.style.display = "none";
+    noItemSection.style.display = "block";
+  } else {
+    searchFilter();
+    noItemSection.style.display = "none";
+    mainContainer.style.display = "block";
+  }
 });
 
+// filtered btn logic
+const filteredBtnLogic = (buttonId, category, type) => {
+  const button = document.getElementById(buttonId);
 
+  button.addEventListener("click", () => {
+    mainContainer.style.display = "none";
+    searchSection.style.display = "block";
 
-
-
+    filterAndRenderLogic(category, type, "searchContainer");
+    window.scrollTo(0, 0);
+  });
+};

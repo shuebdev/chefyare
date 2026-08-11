@@ -31,3 +31,9 @@ searchbtns.addEventListener('click', () => {
   searchFilter();
 })
 
+filteredBtnLogic("vanillaCakesbtn",CATEGORY.CAKE, TYPE.VANILLA,);
+filteredBtnLogic("chocolateCakesBtn", CATEGORY.CAKE, TYPE.CHOCOLATE);
+filteredBtnLogic("meals", CATEGORY.MEAL, null);
+
+
+

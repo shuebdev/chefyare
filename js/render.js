@@ -151,6 +151,9 @@ const renderCartSummary = (items, container) => {
 const noItemContainer = document.getElementById("noItemContainer");
 const renderNoItem = () => {
 
+   noItemContainer.innerHTML = "";
+
+
   const container = document.createElement("div");
 
   container.className = "no-items-wrapper";
@@ -176,14 +179,11 @@ const renderNoItem = () => {
   `;
 
  const noItem =  noItemContainer.appendChild(container);
-
- console.log(noItem);
  return noItem;
   
   
 }
 
-renderNoItem();
 
 
 

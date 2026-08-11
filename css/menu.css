@@ -70,20 +70,29 @@ header {
 @media only screen and (min-width: 768px)
 {
   header {
-    padding-top: 80px;
+    margin-top: 80px;
     background-color: transparent;
     box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .search-wrapper {
+    background-color: var(--white-1);
+    padding: 1rem;
+    border-radius : .8rem;
   }
 }
 
 main {
   padding-top: 160px;
-  display: none;
+ 
 }
 
 #searchSection {
   padding-top: 160px;
-  display: none;
+
 }
 
 .search {
@@ -142,7 +151,20 @@ main {
 .no-items-desc {
   font-size: 3rem;
   color: var(--blue-2);
+  text-align: center;
+  line-height: 1.2em;
 }
 
 /* menu grid */
+
+/* work styles */
+@media only screen and (max-width: 678px)
+{
+  .myWork-item-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+}
 
