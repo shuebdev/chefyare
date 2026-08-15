@@ -31,8 +31,8 @@ let params = new URLSearchParams(window.location.search);
 let id = Number(params.get("id"));
 // product
 const foods = [
+  // Featured home page cakes
   {
-    // Featured home page cakes
     id: 100,
     image: "./images/mangocake.webp",
     name: "Chocolate Cake",
@@ -59,20 +59,6 @@ const foods = [
     details: null,
   },
   {
-    id: 300,
-    image: "./images/vanillacake.webp",
-    name: "Vanilla Cake",
-    category: CATEGORY.CAKE,
-    type: TYPE.VANILLA,
-    occasion: null,
-    featured: true,
-    description:
-      "Light, fluffy, and perfectly sweet. Made with premium ingredients and ideal for custom designs, birthdays, and family celebrations.",
-    price: bigCakePrice,
-    details:
-      "Our Classic Vanilla Cake is a timeless dessert made with premium vanilla extract and the finest ingredients to create a soft, light, and fluffy sponge. Layered with smooth vanilla buttercream and beautifully decorated, it's perfect for birthdays, family gatherings, weddings, or simply enjoying as a delicious everyday treat",
-  },
-  {
     id: 400,
     image: "./images/redvalletcake.webp",
     name: "Red Velvet Cake",
@@ -85,19 +71,7 @@ const foods = [
     price: bigCakePrice,
     details: null,
   },
-  {
-    id: 500,
-    image: "./images/blackforestcake.webp",
-    name: "Black Forest Cake",
-    category: CATEGORY.CAKE,
-    type: TYPE.CHOCOLATE,
-    occasion: null,
-    featured: true,
-    description:
-      "Layers of chocolate sponge, fresh cream, and cherries combined into a rich and delightful cake that everyone will love.",
-    price: bigCakePrice,
-    details: null,
-  },
+
   {
     id: 600,
     image: "./images/strawberrycake.webp",
@@ -251,7 +225,7 @@ const foods = [
     details:
       "A soft and fluffy vanilla sponge layered with vibrant rainbow colors and finished with smooth vanilla buttercream. This cheerful cake is perfect for birthdays, celebrations, and anyone who loves a fun, colorful dessert with the classic taste of vanilla.",
   },
-
+  // ocassions vanilla cakes
   // ? vanilla birthday cake
   {
     id: 8,
@@ -348,126 +322,277 @@ const foods = [
       "Celebrate your academic achievement with our Graduation Vanilla Cake, made from soft, fluffy vanilla sponge layered with smooth vanilla buttercream. Decorated with graduation caps, diplomas, and elegant finishing touches, it's the perfect centerpiece for graduation parties and memorable celebrations.",
   },
 
+  // ? gender reveal vanilla cake
+  {
+    id: 14,
+    image: "images/vanillagendercake.webp",
+    name: "Gender Reveal Vanilla Cake",
+    category: CATEGORY.CAKE,
+    type: TYPE.VANILLA,
+    occasion: OCCASSION.ENGAGEMENT,
+    featured: false,
+    description:
+      "Celebrate your academic achievement with a beautifully decorated vanilla cake featuring smooth buttercream frosting and elegant graduation-themed decorations. Perfect for marking this unforgettable milestone.",
+    price: bigCakePrice,
+    details:
+      "Celebrate your academic achievement with our Graduation Vanilla Cake, made from soft, fluffy vanilla sponge layered with smooth vanilla buttercream. Decorated with graduation caps, diplomas, and elegant finishing touches, it's the perfect centerpiece for graduation parties and memorable celebrations.",
+  },
+
   // End of vanilla cakes data
 
   // Chocolate cakes data
 
   {
     id: 16,
-    image: "",
-    name: "",
+    image: "images/chocolatefudgecake.webp",
+    name: "Chocolate Fudge Cake",
     category: CATEGORY.CAKE,
     type: TYPE.CHOCOLATE,
     occasion: null,
     featured: false,
-    description: "",
-    price: 0,
-    details: null,
+    description:
+      "A rich and moist chocolate cake layered with smooth fudge frosting. Perfect for chocolate lovers who enjoy a deep, indulgent flavor.",
+    price: bigCakePrice,
+    details:
+      "Our Chocolate Fudge Cake is made with layers of moist chocolate sponge and rich fudge frosting, delivering an intense chocolate flavor in every bite. Smooth, creamy, and indulgent, it's the perfect dessert for birthdays, celebrations, or anyone who loves premium chocolate.",
   },
 
   {
     id: 17,
-    image: "",
-    name: "",
+    image: "images/chocolatetruflecake.webp",
+    name: "chocolate truffle cake",
     category: CATEGORY.CAKE,
     type: TYPE.CHOCOLATE,
     occasion: null,
     featured: false,
-    description: "",
-    price: 0,
-    details: null,
+    description:
+      "Made with premium chocolate and finished with a silky ganache coating, offering a luxurious and creamy taste in every slice.",
+    price: bigCakePrice,
+    details:
+      "Made with premium chocolate and coated in silky chocolate ganache, our Chocolate Truffle Cake offers a luxurious dessert experience. Its rich flavor and smooth texture make it an excellent choice for anniversaries, parties, and special celebrations.",
   },
 
   {
     id: 18,
-    image: "",
-    name: "",
+    image: "./images/blackforestcake.webp",
+    name: "Black Forest Cake",
     category: CATEGORY.CAKE,
     type: TYPE.CHOCOLATE,
     occasion: null,
-    featured: false,
-    description: "",
-    price: 0,
-    details: null,
+    featured: true,
+    description:
+      "Layers of chocolate sponge, fresh cream, and cherries combined into a rich and delightful cake that everyone will love.",
+    price: bigCakePrice,
+    details:
+      "A classic dessert featuring layers of soft chocolate sponge, fresh whipped cream, and sweet cherries. Finished with chocolate shavings, this cake perfectly balances rich chocolate with refreshing fruit flavors.",
   },
 
   {
     id: 19,
-    image: "",
-    name: "",
+    image: "images/chocolatebuttercreamcake.webp",
+    name: "Chocolate buttercream cake",
     category: CATEGORY.CAKE,
     type: TYPE.CHOCOLATE,
     occasion: null,
     featured: false,
-    description: "",
-    price: 0,
-    details: null,
+    description:
+      "Soft chocolate sponge layered with creamy chocolate buttercream, making it a favorite for birthdays and celebrations.",
+    price: bigCakePrice,
+    details:
+      "Our Chocolate Buttercream Cake combines moist chocolate sponge with smooth chocolate buttercream frosting. Rich, creamy, and satisfying, it's a favorite for birthdays, office celebrations, and family gatherings.",
   },
 
   {
     id: 20,
-    image: "",
-    name: "",
+    image: "images/chocolatedripcake.webp",
+    name: "Chocolate drip cake",
     category: CATEGORY.CAKE,
     type: TYPE.CHOCOLATE,
     occasion: null,
     featured: false,
-    description: "",
-    price: 0,
-    details: null,
+    description:
+      "A modern chocolate cake finished with a beautiful chocolate drip and elegant decorations for a stunning presentation.",
+    price: bigCakePrice,
+    details:
+      "A beautifully decorated chocolate cake finished with glossy chocolate drip and creamy frosting. Every slice is packed with rich chocolate flavor while offering an elegant presentation for weddings and celebrations.",
   },
 
   {
     id: 21,
-    image: "",
-    name: "",
+    image: "images/doublechocolatecake.webp",
+    name: "double chocolate cake",
     category: CATEGORY.CAKE,
     type: TYPE.CHOCOLATE,
     occasion: null,
     featured: false,
-    description: "",
-    price: 0,
-    details: null,
+    description:
+      "Packed with chocolate in both the sponge and frosting, delivering an extra-rich and satisfying chocolate experience.",
+    price: bigCakePrice,
+    details:
+      "For true chocolate lovers, our Double Chocolate Cake features chocolate sponge layered with chocolate frosting and chocolate chips. Every bite is rich, moist, and loaded with delicious chocolate goodness.",
   },
 
   {
     id: 22,
-    image: "",
-    name: "",
+    image: "images/chocolatestrawberry.webp",
+    name: "chocolate strawberry cake",
     category: CATEGORY.CAKE,
     type: TYPE.CHOCOLATE,
     occasion: null,
     featured: false,
-    description: "",
-    price: 0,
-    details: null,
+    description:
+      "A delicious combination of rich chocolate cake and fresh strawberries, creating the perfect balance of sweetness and freshness.",
+    price: bigCakePrice,
+    details:
+      "This delightful cake combines rich chocolate sponge with layers of fresh strawberries and smooth chocolate frosting. The sweetness of strawberries perfectly complements the deep chocolate flavor for a truly irresistible dessert.",
   },
 
   {
     id: 23,
-    image: "",
-    name: "",
+    image: "images/chocolatemousecake.webp",
+    name: "chocolate mouse cake",
     category: CATEGORY.CAKE,
     type: TYPE.CHOCOLATE,
     occasion: null,
     featured: false,
-    description: "",
-    price: 0,
-    details: null,
+    description:
+      "A light and airy chocolate mousse layered over soft chocolate sponge for a smooth and elegant dessert.",
+    price: bigCakePrice,
+    details:
+      "Our Chocolate Mousse Cake features soft chocolate sponge topped with light, airy chocolate mousse for an elegant dessert with a silky texture. It's perfect for dinner parties, celebrations, or anyone craving a refined chocolate treat.",
   },
 
   {
     id: 24,
-    image: "",
-    name: "",
+    image: "images/chocolateganachecake.webp",
+    name: "chocolate ganache cake",
     category: CATEGORY.CAKE,
     type: TYPE.CHOCOLATE,
     occasion: null,
     featured: false,
-    description: "",
-    price: 0,
-    details: null,
+    description:
+      "Covered in a glossy chocolate ganache, this cake offers a rich, smooth finish that melts in your mouth with every bite.",
+    price: bigCakePrice,
+    details:
+      "Finished with a smooth layer of rich chocolate ganache, this luxurious cake offers a moist chocolate sponge beneath a glossy chocolate coating. Every slice melts in your mouth, making it the ultimate dessert for chocolate enthusiasts.",
   },
+
+  //! ocassion chocolate cakes
+
+  // ? chocolate graduation cake
+  {
+    id: 25,
+    image: "images/chocolategraduationcake.webp",
+    name: "graduation chocolate cake",
+    category: CATEGORY.CAKE,
+    type: TYPE.CHOCOLATE,
+    occasion: OCCASSION.GRADUATION,
+    featured: false,
+    description:
+      "A rich chocolate cake designed with graduation caps, diplomas, and elegant decorations. A delicious centerpiece for celebrating academic success.",
+    price: bigCakePrice,
+    details:
+      "Our Graduation Chocolate Cake features rich chocolate sponge layered with creamy chocolate frosting and decorated with graduation-themed designs. Every slice offers a moist texture and deep chocolate flavor to celebrate your hard-earned success.",
+  },
+
+  // ? chocolate wedding cake
+  {
+    id: 26,
+    image: "images/chocolateweddingcake.webp",
+    name: "wedding chocolate cake",
+    category: CATEGORY.CAKE,
+    type: TYPE.CHOCOLATE,
+    occasion: OCCASSION.WEDDING,
+    featured: false,
+    description:
+      "A sophisticated chocolate wedding cake layered with rich chocolate sponge and finished with elegant decorations, perfect for celebrating your special day.",
+    price: bigCakePrice,
+    details:
+      "Designed for unforgettable wedding celebrations, this elegant Chocolate Wedding Cake features rich chocolate sponge layered with smooth chocolate ganache and finished with sophisticated decorations that blend beauty with exceptional flavor.",
+  },
+
+  //? chocolate birthday cake
+  {
+    id: 27,
+    image: "images/chocolatebirthdaycake.webp",
+    name: "birthday chocolate cake",
+    category: CATEGORY.CAKE,
+    type: TYPE.CHOCOLATE,
+    occasion: OCCASSION.BIRTHDAY,
+    featured: false,
+    description:
+      "A moist chocolate cake covered in creamy chocolate frosting and festive decorations, perfect for birthdays of all ages.",
+    price: bigCakePrice,
+    details:
+      "Celebrate every birthday with our rich Chocolate Birthday Cake, made with moist chocolate sponge and creamy chocolate frosting. Beautifully decorated with festive toppings, it's guaranteed to make every celebration sweeter.",
+  },
+
+  // ? baby shower chocolate cake
+  {
+    id: 28,
+    image: "images/chocolatebabycake.webp",
+    name: "baby shower chocolate cake",
+    category: CATEGORY.CAKE,
+    type: TYPE.CHOCOLATE,
+    occasion: OCCASSION.BABYSHOWER,
+    featured: false,
+    description:
+      "A rich chocolate cake decorated with charming baby-themed details, combining elegant presentation with delicious chocolate flavor.",
+    price: bigCakePrice,
+    details:
+      "Made with rich chocolate sponge and creamy chocolate frosting, our Baby Shower Chocolate Cake is beautifully decorated with baby-themed details, making it a delightful centerpiece for celebrating new beginnings.",
+  },
+
+  // ? annversary chocolate cake
+  {
+    id: 29,
+    image: "images/chocolateanivassarycake.webp",
+    name: "Anniversary Chocolate Cake",
+    category: CATEGORY.CAKE,
+    type: TYPE.CHOCOLATE,
+    occasion: OCCASSION.ANSRY,
+    featured: false,
+    description:
+      "A decadent chocolate cake finished with luxurious frosting and elegant decorations, crafted to make every anniversary celebration unforgettable.",
+    price: bigCakePrice,
+    details:
+      "Our Anniversary Chocolate Cake combines moist chocolate sponge with luxurious chocolate ganache and elegant decorations. Rich in flavor and beautifully presented, it's the ideal dessert for celebrating years of love together.",
+  },
+
+  // ? engagement chocolate cake
+  {
+    id: 30,
+    image: "images/chocolateengagementcake.webp",
+    name: "Engagement Chocolate Cake",
+    category: CATEGORY.CAKE,
+    type: TYPE.CHOCOLATE,
+    occasion: OCCASSION.ENGAGEMENT,
+    featured: false,
+    description:
+      "Rich chocolate layers finished with premium chocolate frosting and stylish engagement-themed decorations for a memorable celebration.",
+    price: bigCakePrice,
+    details:
+      "Our Engagement Chocolate Cake features moist chocolate sponge layered with smooth chocolate frosting and finished with elegant engagement-themed decorations. A perfect blend of sophistication and indulgence.",
+  },
+
+  // ? gender reveal chocolate cake
+  {
+    id: 31,
+    image: "images/chocolategendercake.webp",
+    name: "Gender Reveal Chocolate Cake",
+    category: CATEGORY.CAKE,
+    type: TYPE.CHOCOLATE,
+    occasion: OCCASSION.GENDER_REVEAL,
+    featured: false,
+    description:
+      "A moist chocolate cake filled with a surprise colored center and decorated with elegant gender reveal designs to make the big moment unforgettable.",
+    price: bigCakePrice,
+    details:
+      "Our Gender Reveal Chocolate Cake combines rich chocolate sponge with a hidden colored filling that makes every reveal memorable. Beautifully decorated and full of flavor, it's perfect for celebrating this exciting moment.",
+  },
+
+  //! end of occasion cake
+
   // end of chocolate cake data
   // sample array of the lunch
   {
@@ -558,7 +683,6 @@ cartRenderValid();
 continuefunc();
 cartLenFunc();
 openCheckout();
-
 
 let selectedQuantity = 1;
 

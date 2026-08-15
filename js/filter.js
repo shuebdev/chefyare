@@ -77,6 +77,10 @@ const findingRelated = (selectedProduct) => {
   renderedItems(related, relatedContainer);
 };
 
+// filtered chocolate cakes
+const filteredChocolateCake = () => {
+  filterAndRenderLogic(CATEGORY.CAKE, TYPE.CHOCOLATE, "chocolateCakeContainer")
+}
 // search filtering
 
 const userInput = document.getElementById("userInput");
@@ -104,16 +108,16 @@ noItemSection.style.display = "none";
 
 searchSection.style.display = "none";
 
+ mainContainer.style.display = "block";
+
 // no item logic
 
-
 userInput.addEventListener("keyup", () => {
-  
   let noItemResult = searchFilter();
 
   if (userInput.value.trim() !== "") {
-    mainContainer.style.display = "none";
     searchSection.style.display = "flex";
+     mainContainer.style.display = "none";
   } else {
     mainContainer.style.display = "block";
     searchSection.style.display = "none";
@@ -126,7 +130,7 @@ userInput.addEventListener("keyup", () => {
   } else {
     searchFilter();
     noItemSection.style.display = "none";
-    mainContainer.style.display = "block";
+    
   }
 });
 
@@ -142,3 +146,14 @@ const filteredBtnLogic = (buttonId, category, type) => {
     window.scrollTo(0, 0);
   });
 };
+
+
+// rendering all items 
+const renderAll = document.getElementById("all");
+
+renderAll.addEventListener("click", () => {
+  mainContainer.style.display = "block";
+  searchSection.style.display = "none";
+
+  renderedItems(foods);
+});

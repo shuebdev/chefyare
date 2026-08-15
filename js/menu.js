@@ -22,6 +22,7 @@ AOS.init({
 
 filteredLunch();
 filteredVanillaCakes();
+filteredChocolateCake();
 
 // search button init
 
